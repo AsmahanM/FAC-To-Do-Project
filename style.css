@@ -1,6 +1,17 @@
+/* COLOUR HEX CODES:
+Magenta(#FF00FF)
+Light Blue(#30d5c8)
+Dark Blue(#0d3aa9)
+Yellow(#EFD30B)
+Green(#73ba25)
+Red(#C92A2E)
+Light Grey(#BFBFBF)
+Dark Grey (#474747)
+ */
+
 body {
   margin: 0;
-  /* font-family: ? */
+  font-family: 'Gochi Hand', 'Just Another Hand', cursive;
 }
 
 h1 {
@@ -8,7 +19,7 @@ h1 {
   padding: 0.3em;
   background-color: black;
   text-align: center;
-  color: yellow; /* to be changed to the root color! */
+  color: #EFD30B
 }
 
 .tv {
