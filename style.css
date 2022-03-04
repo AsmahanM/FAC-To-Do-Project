@@ -1,6 +1,9 @@
+
 body {
   margin: 0;
   /* font-family: ? */
+  width: 100vw;
+  height: 100vh;
 }
 
 h1 {
@@ -14,3 +17,37 @@ h1 {
 .tv {
   margin: 2em;
 }
+
+/* static animation for signal failure effect */
+/*
+.tv-static {
+  position: fixed;
+  z-index: -1;
+  margin: auto;
+  width: 100vw;
+  height: 100vh;
+  background-image: repeating-conic-gradient(#EC008E, #7cccfc 0.00085%);
+  background-size: cover;
+  background-position: center;
+  animation: error-static 0.5s steps(2, jump-both) infinite both;
+  transform: translate3d(0, 0, 0);
+}
+
+@keyframes error-static {
+  0% {
+    -webkit-transform: scale(1) translateY(0);
+    transform: scale(1) translateY(0);
+    -webkit-transform-origin: 50% 16%;
+    transform-origin: 50% 100%;
+  }
+  /*
+
+  100% {
+    -webkit-transform: scale(1.25) translateY(-15px);
+    transform: scale(1.25) translateY(-15px);
+    -webkit-transform-origin: top;
+    transform-origin: top;
+  }
+}
+
+*/
