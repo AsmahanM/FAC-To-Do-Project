@@ -11,8 +11,41 @@ Dark Grey (#474747)
 
 body {
   margin: 0;
+  /* font-family: ? */
+  font-family: 'Gochi Hand', 'Just Another Hand', cursive;
+  width: 100vw;
+  height: 100vh; }
+
+/* background signal screen */
+
+.no-signal {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: linear-gradient(to right, #002fc6 0%, #002bb2 14.28571%, #3a3a3a 14.28571%, #303030 28.57143%, #ff0afe 28.57143%, #f500f4 42.85714%, #6c6c6c 42.85714%, #626262 57.14286%, #0affd9 57.14286%, #00f5ce 71.42857%, #3a3a3a 71.42857%, #303030 85.71429%, white 85.71429%, #fafafa 100%);
+}
+
+.no-signal:before{
+    top: 0;
+    height: 68.47826%;
+    background: linear-gradient(to right, white 0%, #fafafa 14.28571%, #ffe60a 14.28571%, #f5dc00 28.57143%, #0affd9 28.57143%, #00f5ce 42.85714%, #10ea00 42.85714%, #0ed600 57.14286%, #ff0afe 57.14286%, #f500f4 71.42857%, #ed0014 71.42857%, #d90012 85.71429%, #002fc6 85.71429%, #002bb2 100%);
+}
+
+.no-signal:before, .no-signal:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+}
+
+.no-signal:after {
+  bottom: 0;
+  height: 21.73913%;
+  background: linear-gradient(to right, #006c6b 0%, #005857 16.66667%, white 16.66667%, #fafafa 33.33333%, #001b75 33.33333%, #001761 50%, #6c6c6c 50%, #626262 66.66667%, #929292 66.66667%, #888888 83.33333%, #3a3a3a 83.33333%, #303030 100%);
   font-family: 'Gochi Hand', 'Just Another Hand', cursive;
 }
+
 
 h1 {
   margin: 0;
@@ -24,4 +57,41 @@ h1 {
 
 .tv {
   margin: 2em;
+    /* needed to be relative and contain z-index to show over the background colors */
+  position: relative;
+  z-index: 10;
 }
+
+/* static animation for signal failure effect */
+/*
+.tv-static {
+  position: fixed;
+  z-index: -1;
+  margin: auto;
+  width: 100vw;
+  height: 100vh;
+  background-image: repeating-conic-gradient(#EC008E, #7cccfc 0.00085%);
+  background-size: cover;
+  background-position: center;
+  animation: error-static 0.5s steps(2, jump-both) infinite both;
+  transform: translate3d(0, 0, 0);
+}
+
+@keyframes error-static {
+  0% {
+    -webkit-transform: scale(1) translateY(0);
+    transform: scale(1) translateY(0);
+    -webkit-transform-origin: 50% 16%;
+    transform-origin: 50% 100%;
+  }
+  /*
+
+  100% {
+    -webkit-transform: scale(1.25) translateY(-15px);
+    transform: scale(1.25) translateY(-15px);
+    -webkit-transform-origin: top;
+    transform-origin: top;
+  }
+}
+
+*/
