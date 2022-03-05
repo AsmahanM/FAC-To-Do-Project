@@ -43,7 +43,6 @@ h1 {
   /* to be changed to the root color! */ }
 
 .tv {
-  margin: 2em; 
   margin: 2em;
     /* needed to be relative and contain z-index to show over the background colors */
   position: relative;
