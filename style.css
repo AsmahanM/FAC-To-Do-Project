@@ -1,6 +1,18 @@
+/* COLOUR HEX CODES:
+Magenta(#FF00FF)
+Light Blue(#30d5c8)
+Dark Blue(#0d3aa9)
+Yellow(#EFD30B)
+Green(#73ba25)
+Red(#C92A2E)
+Light Grey(#BFBFBF)
+Dark Grey (#474747)
+ */
+
 body {
   margin: 0;
   /* font-family: ? */
+  font-family: 'Gochi Hand', 'Just Another Hand', cursive;
   width: 100vw;
   height: 100vh; }
 
@@ -31,6 +43,7 @@ body {
   bottom: 0;
   height: 21.73913%;
   background: linear-gradient(to right, #006c6b 0%, #005857 16.66667%, white 16.66667%, #fafafa 33.33333%, #001b75 33.33333%, #001761 50%, #6c6c6c 50%, #626262 66.66667%, #929292 66.66667%, #888888 83.33333%, #3a3a3a 83.33333%, #303030 100%);
+  font-family: 'Gochi Hand', 'Just Another Hand', cursive;
 }
 
 
@@ -39,8 +52,8 @@ h1 {
   padding: 0.3em;
   background-color: black;
   text-align: center;
-  color: yellow;
-  /* to be changed to the root color! */ }
+  color: #EFD30B
+}
 
 .tv {
   margin: 2em;
