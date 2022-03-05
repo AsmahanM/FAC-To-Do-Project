@@ -1,0 +1,10 @@
+{
+  "script" :{
+    "css": "node-sass --include-path scss path/to/file.scss path/to/output.css",
+    "watch": "nodemon -e scss -x 'npm run css'"
+  },
+  "devDependencies": {
+    "node-sass": "^7.0.1",
+    "nodemon": "^2.0.15"
+  }
+}
