@@ -8,13 +8,29 @@ Red(#C92A2E)
 Light Grey(#BFBFBF)
 Dark Grey (#474747)
  */
+:root {
+--ocean-blue: #002fc6;
+--darkOcean-blue: #002bb2;
+--darkGrey-color: #3a3a3a;
+--strongShade-grey: #303030;
+--bright-pink: #ff0afe;
+--sharp-retroPink: #f500f4;
+--lightGrey-color: #6c6c6c;
+--light-greyTwo: #626262;
+--bright-greenMint: #0affd9;
+--lightGreen-color: #00f5ce;
+--white-color: #FFFFFF;
+--tinted-grey: #fafafa;
+
+}
 
 body {
   margin: 0;
   /* font-family: ? */
   font-family: 'Gochi Hand', 'Just Another Hand', cursive;
   width: 100vw;
-  height: 100vh; }
+  height: 100vh; 
+}
 
 /* background signal screen */
 
@@ -22,7 +38,7 @@ body {
   width: 100%;
   height: 100%;
   position: relative;
-  background: linear-gradient(to right, #002fc6 0%, #002bb2 14.28571%, #3a3a3a 14.28571%, #303030 28.57143%, #ff0afe 28.57143%, #f500f4 42.85714%, #6c6c6c 42.85714%, #626262 57.14286%, #0affd9 57.14286%, #00f5ce 71.42857%, #3a3a3a 71.42857%, #303030 85.71429%, white 85.71429%, #fafafa 100%);
+  background: linear-gradient(to right, var(--ocean-blue) 0%, var(--darkOcean-blue) 14.28571%, var(--darkGrey-color) 14.28571%, var(--strongShade-grey) 28.57143%, var(--bright-pink) 28.57143%, var(--sharp-retroPink) 42.85714%, var(--lightGrey-color) 42.85714%, var(--light-greyTwo) 57.14286%, var(--bright-greenMint) 57.14286%, var(--lightGreen-color) 71.42857%, var(--darkGrey-color) 71.42857%, var(--strongShade-grey) 85.71429%, var(--white-color) 85.71429%, var(--tinted-grey) 100%);
 }
 
 .no-signal:before{
