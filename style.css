@@ -120,8 +120,24 @@ h1 {
 }
 
 .tv img:hover{
-  animation: shake 0.5s;
+  /* animation will last for a duration of 1 second */
+  animation: tele-shake 1s;
+  /* every time the animation finishes it will immediately start again */
   animation-iteration-count: infinite;
+}
+
+@keyframes tele-shake {
+  0% { transform: translate(1.6px, 1.6px) rotate(0deg); }
+  10% { transform: translate(-1.8px, -2.8px) rotate(-1deg); }
+  20% { transform: translate(-3.7px, 0.4px) rotate(1deg); }
+  30% { transform: translate(3.6px, 2.6px) rotate(0deg); }
+  40% { transform: translate(1.6px, -1.5px) rotate(1deg); }
+  50% { transform: translate(-1.9px, 2.5px) rotate(-1deg); }
+  60% { transform: translate(-3.5px, 1.5px) rotate(0deg); }
+  70% { transform: translate(3.5px, 2.2px) rotate(-1deg); }
+  80% { transform: translate(-2px, -2px) rotate(1deg); }
+  90% { transform: translate(1.8px, 2.5px) rotate(0deg); }
+  100% { transform: translate(1.7px, -2.6px) rotate(-1deg); }
 }
 
 /* static animation for signal failure effect */
