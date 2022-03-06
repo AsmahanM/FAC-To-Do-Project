@@ -62,6 +62,82 @@ h1 {
   z-index: 10;
 }
 
+/* To-Do List Skeleton: */
+.list-container {
+  background: black;
+  width: 40%;
+  top: 30%;
+  left: 30%;
+  right: 50%;
+  min-height: 100px;
+  min-width: 300px;
+  border-radius: 0px;
+  z-index: 2;
+  position: relative;
+  margin: 0;  
+}
+
+/* List input button */
+.list-input {
+  position: relative;
+  padding: 20px;
+
+}
+
+.list-input input{
+ width: 80%;
+ height: 30px;
+ padding 20px;
+ color: #FF00FF;
+ position: relative;
+ border-radius: 0px;
+ font-family:'Gochi Hand', 'Just Another Hand', cursive;
+ font-size: 16px;
+ border-style: solid;
+ border-color: #FF00FF;
+ background-color: black;
+ border-width: 2px;
+ letter-spacing: 0.1em;
+}
+
+.list-input input:focus{
+  outline:none;
+}
+
+.list-input button{
+  position: relative;
+  float: right;
+  font-weight: 500;
+  font-size: 16px;
+  background-color: black;
+  border: none;
+  color: #FF00FF;
+  cursor: pointer;
+  outline: none;
+  width: 15%;
+  height: 36px;
+  border-radius: 0px;
+  border-style: solid;
+  border-color: #FF00FF;
+  border-width: 2px;
+  font-family:'Gochi Hand', 'Just Another Hand', cursive;
+  padding: 10px;
+  letter-spacing: 0.1em;
+  align-items: center;
+  
+}
+
+/* Titles to be added to list: */
+.titles{
+  border-radius: 0px;
+  width: 91.3%;
+  position: relative;
+  background-color: #ffffff;
+  padding: 30px 20px;
+  margin-top: 10px;
+}
+
+
 /* static animation for signal failure effect */
 /*
 .tv-static {
