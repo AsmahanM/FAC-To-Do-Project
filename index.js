@@ -16,7 +16,7 @@ function createList() {
     //create inner div for input and button element.
     const inputDiv = document.createElement('div')
     // inputTitle.setAttribute("class", "list-input")
-    inputDiv.class="list-input"
+    inputDiv.classList.add("list-input")
     newList.appendChild(inputDiv)
     
 
@@ -24,7 +24,7 @@ function createList() {
     const inputTitle = document.createElement('input')
     inputTitle.type="text"
     inputTitle.placeholder="Add new title."
-    inputTitle.class="list-input"
+    inputTitle.classList.add("list-input")
     // inputTitle.setAttribute("type", "text")
     // inputTitle.setAttribute("placeholder", "Add new title.")
    
@@ -35,7 +35,7 @@ function createList() {
     const inputBtn = document.createElement('button')
     inputBtn.id="add-title"
     inputBtn.innerHTML="Add"
-    inputBtn.class="list-input"
+    inputBtn.classList.add("list-input")
     // inputBtn.setAttribute("id", "#add-title")
     // inputBtn.setAttribute("value", "Add")
 
