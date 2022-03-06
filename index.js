@@ -1,8 +1,8 @@
-//select the tv button element.
+// //select the tv button element.
 const createNewList = document.querySelector('.tv')
 
-//create eventListener to initiate function when tv button is clicked.
-createNewList.addEventlistener('onclick', createList()) 
+// // create eventListener to initiate function when tv button is clicked.
+createNewList.addEventlistener('click', createList()) 
 
 //function to create a new list onclick.
 function createList() {
@@ -40,7 +40,5 @@ function createList() {
     //append the new list to tv button.
     const element = document.querySelector('.tv')
     element.appendChild(newList)
-
+    // element.addEventlistener('click', createList()) 
 }
-
-
