@@ -89,11 +89,34 @@ h1 {
   color: var(--mustard-yellow);
 }
 
+/* Styling for TV button */
+
 .tv {
-  margin: 2em;
-    /* needed to be relative and contain z-index to show over the background colors */
+  margin: 0 2em;
   position: relative;
   z-index: 10;
+  background-color: transparent;
+  border: none;
+  height: 10em;
+}
+
+.tv img {
+  width: 10em;
+  z-index: 5;
+}
+
+.tv p {
+  /* position relaive used to move the <p> up so it appears in the TV */
+  position: relative;
+  bottom: 7.7em;
+  left: 1.7em;
+  width: 3em;
+  color: #EFD30B;
+  background-color: black;
+  padding: 1em;
+  z-index: -1; /* I'm not sure if it's good practice to use negative z-index but this is the only way to get the text behind the tv */
+  letter-spacing: 2px;
+  font-family: 'Gochi Hand', 'Just Another Hand', cursive;
 }
 
 /* static animation for signal failure effect */
