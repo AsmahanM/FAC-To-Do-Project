@@ -119,6 +119,11 @@ h1 {
   font-family: 'Gochi Hand', 'Just Another Hand', cursive;
 }
 
+.tv img:hover{
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
 /* static animation for signal failure effect */
 /*
 .tv-static {
