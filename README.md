@@ -6,7 +6,7 @@
 
 #### Designed and Developed by [Asmahan](https://github.com/AsmahanM), [Maria](https://github.com/mariaalouisaa) and [Peter](https://github.com/PJSalter)
 
-### Product Design:
+### :tickets: Product Design:
 **Mobile View:**
 
 ![Screen Shot 2022-03-04 at 21 44 04](https://user-images.githubusercontent.com/82019270/156847362-11a3dd98-8185-4a43-bf58-2b18e29ca056.png)
