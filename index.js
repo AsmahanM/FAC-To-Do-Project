@@ -8,7 +8,7 @@
 const createNewList = document.querySelector('.tv')
 
 //eventListener to initiate function when tv button is clicked.
-createNewList.addEventlistener('click', createList) 
+createNewList.addEventlistener('click', createList()) 
 
 //function to create a new list onclick.
 function createList() {
