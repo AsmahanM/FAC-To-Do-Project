@@ -1,4 +1,10 @@
-# FAC To-Do list Project
+# :cup_with_straw: FAC To-Do list Project :popcorn:
+
+## :performing_arts: Binge List :movie_camera:
+
+###### :vhs: A place for adding lists of all your favourite Binge Worthy Movies :tv:
+
+#### Designed and Developed by [Asmahan](https://github.com/AsmahanM), [Maria](https://github.com/mariaalouisaa) and [Peter](https://github.com/PJSalter)
 
 ### Product Design:
 **Mobile View:**
