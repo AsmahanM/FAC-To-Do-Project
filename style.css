@@ -85,9 +85,9 @@ h1 {
 }
 
 .list-input input{
- width: 80%;
+ width: 75%;
  height: 30px;
- padding 20px;
+ padding: 10px;
  color: #FF00FF;
  position: relative;
  border-radius: 0px;
@@ -121,7 +121,7 @@ h1 {
   border-color: #FF00FF;
   border-width: 2px;
   font-family:'Gochi Hand', 'Just Another Hand', cursive;
-  padding: 10px;
+  padding: 5px;
   letter-spacing: 0.1em;
   align-items: center;
   
