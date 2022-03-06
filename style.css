@@ -17,6 +17,7 @@ Dark Grey (#474747)
 --light-greyTwo: #626262;
 --darkGrey-color: #3a3a3a;
 --strongShade-grey: #303030;
+--onyx-black: #000000;
 --sunnyYellow-color: #ffe60a;
 --mustard-yellow: #f5dc00;
 --bright-greenMint: #0affd9;
@@ -77,7 +78,7 @@ body {
 h1 {
   margin: 0;
   padding: 0.3em;
-  background-color: black;
+  background-color: var(--onyx-black);
   text-align: center;
   color: var(--mustard-yellow);
 }
