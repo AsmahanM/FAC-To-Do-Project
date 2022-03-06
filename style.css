@@ -113,7 +113,10 @@ h1 {
   width: 3em;
   color: var(--mustard-yellow);
   background-color: var(--onyx-black);
-  padding: 1em;
+  /* padding: 1em; */
+  /* had to change the padding to 0.9em because the background was visible
+  below the animated tele once shake happened. */
+  padding: 0.9em;
   z-index: -1; /* I'm not sure if it's good practice to use negative z-index but this is the only way to get the text behind the tv */
   letter-spacing: 2px;
   font-family: 'Gochi Hand', 'Just Another Hand', cursive;
