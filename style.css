@@ -9,30 +9,31 @@ Light Grey(#BFBFBF)
 Dark Grey (#474747)
  */
 :root {
---ocean-blue: #002fc6;
---darkOcean-blue: #002bb2;
---darkGrey-color: #3a3a3a;
---strongShade-grey: #303030;
---bright-pink: #ff0afe;
---sharp-retroPink: #f500f4;
---lightGrey-color: #6c6c6c;
---light-greyTwo: #626262;
---steel-grey: #929292;
---fossil-grey: #888888;
---bright-greenMint: #0affd9;
---lightGreen-color: #00f5ce;
 --white-color: #FFFFFF;
 --tinted-grey: #fafafa;
+--steel-grey: #929292;
+--fossil-grey: #888888;
+--lightGrey-color: #6c6c6c;
+--light-greyTwo: #626262;
+--darkGrey-color: #3a3a3a;
+--strongShade-grey: #303030;
 --sunnyYellow-color: #ffe60a;
 --mustard-yellow: #f5dc00;
+--bright-greenMint: #0affd9;
+--lightGreen-color: #00f5ce;
 --lime-green: #10ea00;
 --neonBright-green: #0ed600;
---rich-red: #ed0014;
---venetian-red: #d90012;
 --veryDark-cyan: #006c6b;
 --darkTeal-color: #005857;
+--ocean-blue: #002fc6;
+--darkOcean-blue: #002bb2;
 --midnight-blue: #001b75;
 --milkyWay-deepBlue: #001761;
+--bright-pink: #ff0afe;
+--sharp-retroPink: #f500f4;
+--rich-red: #ed0014;
+--venetian-red: #d90012;
+
 }
 
 body {
