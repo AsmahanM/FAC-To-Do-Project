@@ -24,6 +24,7 @@ function createList() {
     const inputTitle = document.createElement('input')
     inputTitle.type="text"
     inputTitle.placeholder="Add new title."
+    inputTitle.class="list-input"
     // inputTitle.setAttribute("type", "text")
     // inputTitle.setAttribute("placeholder", "Add new title.")
    
@@ -34,6 +35,7 @@ function createList() {
     const inputBtn = document.createElement('button')
     inputBtn.id="add-title"
     inputBtn.innerHTML="Add"
+    inputBtn.class="list-input"
     // inputBtn.setAttribute("id", "#add-title")
     // inputBtn.setAttribute("value", "Add")
 
