@@ -111,8 +111,8 @@ h1 {
   bottom: 7.7em;
   left: 1.7em;
   width: 3em;
-  color: #EFD30B;
-  background-color: black;
+  color: var(--mustard-yellow);
+  background-color: var(--onyx-black);
   padding: 1em;
   z-index: -1; /* I'm not sure if it's good practice to use negative z-index but this is the only way to get the text behind the tv */
   letter-spacing: 2px;
