@@ -1,14 +1,8 @@
-// document.querySelector('.add-title').onclick = function() {
-//     if (document.querySelector('.list-input input').value.length == 0) {
-//         alert("Hey! You forgot to add a new title :(")
-//     }
-// }
-
 //select the tv button element.
 const createNewList = document.querySelector('.tv')
 
-//eventListener to initiate function when tv button is clicked.
-createNewList.addEventlistener('click', createList()) 
+//create eventListener to initiate function when tv button is clicked.
+createNewList.addEventlistener('onclick', createList()) 
 
 //function to create a new list onclick.
 function createList() {
@@ -19,7 +13,7 @@ function createList() {
     newList.class="list-container"
    
 
-    //create div for input and button element.
+    //create inner div for input and button element.
     const inputDiv = document.createElement('div')
     // inputTitle.setAttribute("class", "list-input")
     inputDiv.class="list-input"
@@ -39,7 +33,7 @@ function createList() {
     //create button to submit input.
     const inputBtn = document.createElement('button')
     inputBtn.id="add-title"
-    inputBtn.value="Add"
+    inputBtn.innerHTML="Add"
     // inputBtn.setAttribute("id", "#add-title")
     // inputBtn.setAttribute("value", "Add")
 
@@ -47,7 +41,7 @@ function createList() {
     
     //append the new list to tv button.
     const element = document.querySelector('.tv')
-    element.append(newList)
+    element.appendChild(newList)
 
 }
 
