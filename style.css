@@ -152,6 +152,12 @@ h1 {
   margin-top: 50px;
 }
 
+
+/**/
+.main {
+  margin: 6em;
+}
+
 /* List input button */
 .list-input {
   position: relative;
