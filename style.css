@@ -1,23 +1,57 @@
+:root {
+--white-color: #FFFFFF;
+--tinted-grey: #fafafa;
+--steel-grey: #929292;
+--fossil-grey: #888888;
+--lightGrey-color: #6c6c6c;
+--light-greyTwo: #626262;
+--darkGrey-color: #3a3a3a;
+--strongShade-grey: #303030;
+--onyx-black: #000000;
+--sunnyYellow-color: #ffe60a;
+--mustard-yellow: #f5dc00;
+--bright-greenMint: #0affd9;
+--lightGreen-color: #00f5ce;
+--lime-green: #10ea00;
+--neonBright-green: #0ed600;
+--veryDark-cyan: #006c6b;
+--darkTeal-color: #005857;
+--ocean-blue: #002fc6;
+--darkOcean-blue: #002bb2;
+--midnight-blue: #001b75;
+--milkyWay-deepBlue: #001761;
+--bright-pink: #ff0afe;
+--sharp-retroPink: #f500f4;
+--rich-red: #ed0014;
+--venetian-red: #d90012;
+}
+
+html{
+  overflow: hidden;
+}
 
 body {
   margin: 0;
   font-family: 'Gochi Hand', 'Just Another Hand', cursive;
-  width: 100vw;
-  height: 100vh; }
+  /* width: 100vw;  */
+  width: calc(var(--vw, 1vw) * 100);
+  height: 100vh; 
+  overflow: auto; 
+}
 
 /* background signal screen */
 
 .no-signal {
-  width: 100%;
-  height: 100%;
+  width: 100%; 
+  height: 100%; 
   position: relative;
-  background: linear-gradient(to right, #002fc6 0%, #002bb2 14.28571%, #3a3a3a 14.28571%, #303030 28.57143%, #ff0afe 28.57143%, #f500f4 42.85714%, #6c6c6c 42.85714%, #626262 57.14286%, #0affd9 57.14286%, #00f5ce 71.42857%, #3a3a3a 71.42857%, #303030 85.71429%, white 85.71429%, #fafafa 100%);
+  background: linear-gradient(to right, var(--ocean-blue) 0%, var(--darkOcean-blue) 14.28571%, var(--darkGrey-color) 14.28571%, var(--strongShade-grey) 28.57143%, var(--bright-pink) 28.57143%, var(--sharp-retroPink) 42.85714%, var(--lightGrey-color) 42.85714%, var(--light-greyTwo) 57.14286%, var(--bright-greenMint) 57.14286%, var(--lightGreen-color) 71.42857%, var(--darkGrey-color) 71.42857%, var(--strongShade-grey) 85.71429%, var(--white-color) 85.71429%, var(--tinted-grey) 100%);
 }
 
 .no-signal:before{
     top: 0;
     height: 68.47826%;
-    background: linear-gradient(to right, white 0%, #fafafa 14.28571%, #ffe60a 14.28571%, #f5dc00 28.57143%, #0affd9 28.57143%, #00f5ce 42.85714%, #10ea00 42.85714%, #0ed600 57.14286%, #ff0afe 57.14286%, #f500f4 71.42857%, #ed0014 71.42857%, #d90012 85.71429%, #002fc6 85.71429%, #002bb2 100%);
+    background: linear-gradient(to right, var(--white-color) 0%, var(--tinted-grey) 14.28571%, var(--sunnyYellow-color) 14.28571%, var(--mustard-yellow) 28.57143%, var(--bright-greenMint) 28.57143%, var(--lightGreen-color) 42.85714%, var(--lime-green) 42.85714%, var(--neonBright-green) 57.14286%, var(--bright-pink) 57.14286%, var(--sharp-retroPink) 71.42857%, var(--rich-red) 71.42857%, var(--venetian-red) 85.71429%, var(--ocean-blue) 85.71429%, var(--darkOcean-blue) 100%);
 }
 
 .no-signal:before, .no-signal:after {
@@ -31,7 +65,7 @@ body {
 .no-signal:after {
   bottom: 0;
   height: 21.73913%;
-  background: linear-gradient(to right, #006c6b 0%, #005857 16.66667%, white 16.66667%, #fafafa 33.33333%, #001b75 33.33333%, #001761 50%, #6c6c6c 50%, #626262 66.66667%, #929292 66.66667%, #888888 83.33333%, #3a3a3a 83.33333%, #303030 100%);
+  background: linear-gradient(to right, var(--veryDark-cyan) 0%, var(--darkTeal-color) 16.66667%, var(--white-color) 16.66667%, var(--tinted-grey) 33.33333%, var(--midnight-blue) 33.33333%, var(--milkyWay-deepBlue) 50%, var(--lightGrey-color) 50%, var(--light-greyTwo) 66.66667%, var(--steel-grey) 66.66667%, var(--fossil-grey) 83.33333%, var(--darkGrey-color) 83.33333%, var(--strongShade-grey) 100%);
   font-family: 'Gochi Hand', 'Just Another Hand', cursive;
 }
 
@@ -39,16 +73,63 @@ body {
 h1 {
   margin: 0;
   padding: 0.3em;
-  background-color: black;
+  background-color: var(--onyx-black);
   text-align: center;
-  color: #EFD30B
+  color: var(--mustard-yellow);
 }
 
+/* Styling for TV button */
+
 .tv {
-  margin: 2em;
-    /* needed to be relative and contain z-index to show over the background colors */
+  margin: 0 2em;
   position: relative;
   z-index: 10;
+  background-color: transparent;
+  border: none;
+  height: 10em;
+}
+
+.tv img {
+  width: 10em;
+  z-index: 5;
+}
+
+.tv p {
+  /* position relaive used to move the <p> up so it appears in the TV */
+  position: relative;
+  bottom: 7.7em;
+  left: 1.7em;
+  width: 3em;
+  color: var(--mustard-yellow);
+  background-color: var(--onyx-black);
+  /* padding: 1em; */
+  /* had to change the padding to 0.9em because the background was visible
+  below the animated tele once shake happened. */
+  padding: 0.9em;
+  z-index: -1; /* I'm not sure if it's good practice to use negative z-index but this is the only way to get the text behind the tv */
+  letter-spacing: 2px;
+  font-family: 'Gochi Hand', 'Just Another Hand', cursive;
+}
+
+.tv img:hover{
+  /* animation will last for a duration of 1 second */
+  animation: tele-shake 1s;
+  /* every time the animation finishes it will immediately start again */
+  animation-iteration-count: infinite;
+}
+
+@keyframes tele-shake {
+  0% { transform: translate(1.6px, 1.6px) rotate(0deg); }
+  10% { transform: translate(-1.8px, -2.8px) rotate(-1deg); }
+  20% { transform: translate(-3.7px, 0.4px) rotate(1deg); }
+  30% { transform: translate(3.6px, 2.6px) rotate(0deg); }
+  40% { transform: translate(1.6px, -1.5px) rotate(1deg); }
+  50% { transform: translate(-1.9px, 2.5px) rotate(-1deg); }
+  60% { transform: translate(-3.5px, 1.5px) rotate(0deg); }
+  70% { transform: translate(3.5px, 2.2px) rotate(-1deg); }
+  80% { transform: translate(-2px, -2px) rotate(1deg); }
+  90% { transform: translate(1.8px, 2.5px) rotate(0deg); }
+  100% { transform: translate(1.7px, -2.6px) rotate(-1deg); }
 }
 
 /* To-Do List Skeleton: */
