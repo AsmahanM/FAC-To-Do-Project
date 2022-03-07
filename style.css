@@ -1,17 +1,6 @@
-/* COLOUR HEX CODES:
-Magenta(#FF00FF)
-Light Blue(#30d5c8)
-Dark Blue(#0d3aa9)
-Yellow(#EFD30B)
-Green(#73ba25)
-Red(#C92A2E)
-Light Grey(#BFBFBF)
-Dark Grey (#474747)
- */
 
 body {
   margin: 0;
-  /* font-family: ? */
   font-family: 'Gochi Hand', 'Just Another Hand', cursive;
   width: 100vw;
   height: 100vh; }
