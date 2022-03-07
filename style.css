@@ -85,7 +85,7 @@ h1 {
 /* Styling for TV button */
 
 .tv {
-  margin: 0 2em;
+  margin: 3.5em 2em auto 2em;
   position: relative;
   z-index: 10;
   background-color: transparent;
