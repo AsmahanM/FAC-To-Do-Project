@@ -73,6 +73,9 @@ body {
 
 h1 {
   margin: 0;
+  position: fixed;
+  width: 100vw;
+  z-index: 20;
   padding: 0.3em;
   background-color: var(--onyx-black);
   text-align: center;
