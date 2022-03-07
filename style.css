@@ -44,7 +44,8 @@ body {
 .no-signal {
   width: 100%; 
   height: 100%; 
-  position: relative;
+  position: fixed;
+  z-index: -1;
   background: linear-gradient(to right, var(--ocean-blue) 0%, var(--darkOcean-blue) 14.28571%, var(--darkGrey-color) 14.28571%, var(--strongShade-grey) 28.57143%, var(--bright-pink) 28.57143%, var(--sharp-retroPink) 42.85714%, var(--lightGrey-color) 42.85714%, var(--light-greyTwo) 57.14286%, var(--bright-greenMint) 57.14286%, var(--lightGreen-color) 71.42857%, var(--darkGrey-color) 71.42857%, var(--strongShade-grey) 85.71429%, var(--white-color) 85.71429%, var(--tinted-grey) 100%);
 }
 
