@@ -249,7 +249,7 @@ h1 {
   display: flex;
   align-items: center;
   margin-bottom: 5px;
-  background: rgb(181, 225, 250);
+  background-color: var(--onyx-black);
 }
 
 .movie-name input.new-film {
