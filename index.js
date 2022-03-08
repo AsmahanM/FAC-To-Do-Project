@@ -75,12 +75,16 @@ inputBtn.addEventListener('click', (e) => {
   newFeatureFilm.value = inputTitle.value;
   newFeatureFilm.setAttribute('readonly', 'readonly');
 
+// append the bingeWorthy and newFeatureFilm to the inputDiv
 inputDiv.append(bingeWorthy, newFeatureFilm)
 
+// clearing the input title field
 //console.log(inputDiv.value = "");
 inputTitle.value = "";
+
   }
-  })
+
+})
 
 }
 
