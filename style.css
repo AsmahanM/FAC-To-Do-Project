@@ -134,7 +134,7 @@ h1 {
 
 /* To-Do List Skeleton: */
 .list-container {
-  background: black;
+  background: var(--onyx-black);
   width: 40%;
   top: 30%;
   left: 30%;
@@ -159,14 +159,14 @@ h1 {
  width: 75%;
  height: 30px;
  padding: 10px;
- color: #FF00FF;
+ color: var(--sharp-retroPink);
  position: relative;
  border-radius: 0px;
  font-family:'Gochi Hand', 'Just Another Hand', cursive;
  font-size: 16px;
  border-style: solid;
- border-color: #FF00FF;
- background-color: black;
+ border-color: var(--sharp-retroPink);
+ background-color: var(--onyx-black);
  border-width: 2px;
  letter-spacing: 0.1em;
 }
@@ -180,16 +180,16 @@ h1 {
   float: right;
   font-weight: 500;
   font-size: 16px;
-  background-color: black;
+  background-color: var(--onyx-black);
   border: none;
-  color: #FF00FF;
+  color: var(--sharp-retroPink);
   cursor: pointer;
   outline: none;
   width: 15%;
   height: 36px;
   border-radius: 0px;
   border-style: solid;
-  border-color: #FF00FF;
+  border-color: var(--sharp-retroPink);
   border-width: 2px;
   font-family:'Gochi Hand', 'Just Another Hand', cursive;
   padding: 5px;
