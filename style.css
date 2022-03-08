@@ -168,7 +168,7 @@ h1 {
 
 .list-input input{
  width: 75%;
- height: 30px;
+ height: 15px;
  padding: 10px;
  color: var(--sharp-retroPink);
  position: relative;
@@ -197,7 +197,7 @@ h1 {
   cursor: pointer;
   outline: none;
   width: 15%;
-  height: 36px;
+  height: 39px;
   border-radius: 0px;
   border-style: solid;
   border-color: var(--sharp-retroPink);
