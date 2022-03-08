@@ -276,3 +276,16 @@ h1 {
 }
 
 */
+
+.movie-name {
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  background-color: var(--onyx-black);
+}
+
+.movie-name input.new-film {
+  width: 70%;
+}

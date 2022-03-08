@@ -65,8 +65,38 @@ function createList() {
     const element = document.querySelector('.main')
     element.appendChild(newList)
 
-}
+    // ********************* adding a title for movie in the list *************************** //
 
-
-
+    // adding an event listener to this created inputBtn that is inside the beginning binge list box
+inputBtn.addEventListener('click', (e) => {
   
+  //get the movie title from the input.
+
+  // once the user enters a new movie name, then make a new
+  if(inputTitle.value !== "" && inputTitle.value !== new RegExp("/^\s+$/")) {
+  e.preventDefault();
+  
+  // create a div with a class of movie-name
+  const bingeWorthy = document.createElement('div');
+  bingeWorthy.classList.add('movie-name');
+  //console.log(bingeWorthy);
+
+  // create an input with class new-film
+  const newFeatureFilm = document.createElement('input');
+  newFeatureFilm.classList.add('new-film');
+  newFeatureFilm.value = inputTitle.value;
+  newFeatureFilm.setAttribute('readonly', 'readonly');
+  //console.log(newFeatureFilm);
+
+// append the bingeWorthy and newFeatureFilm to the inputDiv
+inputDiv.append(bingeWorthy, newFeatureFilm)
+
+// clearing the input title field
+//console.log(inputDiv.value = "");
+inputTitle.value = "";
+
+  }
+
+})
+
+}
