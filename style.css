@@ -139,7 +139,7 @@ h1 {
 /* To-Do List Skeleton: */
 .list-container {
   background: var(--onyx-black);
-  width: 40%;
+  max-width: 20em;
   top: 30%;
   left: 30%;
   right: 50%;
@@ -147,16 +147,14 @@ h1 {
   min-width: 300px;
   border-radius: 0px;
   z-index: 2;
-  position: relative;
-  margin: 0;  
-  margin-top: 50px;
+  margin: 50px auto auto auto;
   justify-content: space-evenly;
 }
 
 
 /**/
 .main {
-  margin: 6em;
+  margin-top: 6em;
 }
 
 /* List input button */
