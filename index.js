@@ -24,6 +24,16 @@ function createList() {
     const newList = document.createElement('div')
     newList.classList.add("list-container")
    
+    //create div for title
+    const headingContainer = document.createElement('div')
+    headingContainer.classList.add("listHeadingContainer")
+    newList.appendChild(headingContainer)
+
+    //creating heading h1 and append to title div
+    const headingTitle = document.createElement('h2')
+    headingTitle.classList.add("listCategoryTitle")
+    headingTitle.innerHTML="Title"
+    headingContainer.appendChild(headingTitle)
 
     //create inner div for input and button element.
     const inputDiv = document.createElement('div')
@@ -55,3 +65,7 @@ function createList() {
     element.appendChild(newList)
 
 }
+
+
+
+  

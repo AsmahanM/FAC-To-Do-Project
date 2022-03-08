@@ -150,6 +150,7 @@ h1 {
   position: relative;
   margin: 0;  
   margin-top: 50px;
+  justify-content: space-evenly;
 }
 
 
@@ -206,6 +207,29 @@ h1 {
   letter-spacing: 0.1em;
   align-items: center;
   
+}
+
+/* List Headings */
+.listHeadingContainer {
+  background: var(--onyx-black);
+  width: auto;
+  z-index: 2;
+  padding: 20px;
+  position: relative;
+  position: relative;
+  margin: 0;  
+  margin-bottom: 50px; 
+  height: 40px;
+}
+
+.listCategoryTitle {
+  color: var(--white-color);
+  font-size: 24px;
+  word-wrap: break-word;
+  text-align: center;
+  letter-spacing: 0.1em;
+  margin-bottom: 50%;
+  padding-top: 0%;
 }
 
 /* Titles to be added to list: */
