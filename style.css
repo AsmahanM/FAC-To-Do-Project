@@ -210,7 +210,7 @@ h1 {
 }
 
 /* List Headings */
-.listHeadingContainer {
+.listCategoryContainer {
   background: var(--onyx-black);
   width: auto;
   z-index: 2;

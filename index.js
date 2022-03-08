@@ -26,7 +26,7 @@ function createList() {
    
     //create div for title
     const headingContainer = document.createElement('div')
-    headingContainer.classList.add("listHeadingContainer")
+    headingContainer.classList.add("listCategoryContainer")
     headingContainer.contentEditable=true
     newList.appendChild(headingContainer)
 
