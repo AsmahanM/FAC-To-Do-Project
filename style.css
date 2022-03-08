@@ -242,3 +242,16 @@ h1 {
 }
 
 */
+
+.movie-name {
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  background: rgb(181, 225, 250);
+}
+
+.movie-name input.new-film {
+  width: 70%;
+}
