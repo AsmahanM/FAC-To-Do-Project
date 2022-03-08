@@ -64,6 +64,7 @@ inputBtn.addEventListener('click', (e) => {
   // once the user enters a new movie name, then make a new
   if(inputTitle.value !== "" && inputTitle.value !== new RegExp("/^\s+$/")) {
   e.preventDefault();
+  
   // create a div with a class of movie-name
   const bingeWorthy = document.createElement('div');
   bingeWorthy.classList.add('movie-name');
@@ -74,6 +75,7 @@ inputBtn.addEventListener('click', (e) => {
   newFeatureFilm.classList.add('new-film');
   newFeatureFilm.value = inputTitle.value;
   newFeatureFilm.setAttribute('readonly', 'readonly');
+  //console.log(newFeatureFilm);
 
 // append the bingeWorthy and newFeatureFilm to the inputDiv
 inputDiv.append(bingeWorthy, newFeatureFilm)
