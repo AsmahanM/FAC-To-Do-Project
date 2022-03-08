@@ -199,6 +199,7 @@ h1 {
   border-style: solid;
   border-color: var(--sharp-retroPink);
   border-width: 2px;
+  font-family:'Gochi Hand', 'Just Another Hand', cursive;
   padding: 5px;
   letter-spacing: 0.1em;
   align-items: center;
@@ -314,5 +315,4 @@ h1 {
   margin-right: 1em;
   margin-left: 1em;
 }
-
 }
