@@ -55,7 +55,7 @@ function createList() {
     //create button to submit input.
     const inputBtn = document.createElement('button')
     inputBtn.id="add-title"
-    inputBtn.innerHTML="Add"
+    inputBtn.innerHTML=`<i class="fas fa-plus"></i>`
     inputBtn.classList.add("list-input")
 
     inputDiv.appendChild(inputBtn)
