@@ -24,13 +24,24 @@ function createList() {
     const newList = document.createElement('div')
     newList.classList.add("list-container")
    
+    //create div for title
+    const headingContainer = document.createElement('div')
+    headingContainer.classList.add("listCategoryContainer")
+    headingContainer.contentEditable=true
+    newList.appendChild(headingContainer)
+
+    //creating heading h1 and append to title div
+    const headingTitle = document.createElement('h2')
+    headingTitle.classList.add("listCategoryTitle")
+    headingTitle.innerHTML="Update your list title 🎥"
+    headingContainer.appendChild(headingTitle)
 
     //create inner div for input and button element.
     const inputDiv = document.createElement('div')
     inputDiv.classList.add("list-input")
     
     newList.appendChild(inputDiv)
-    
+
 
     //create input element.
     const inputTitle = document.createElement('input')
@@ -89,6 +100,3 @@ inputTitle.value = "";
 })
 
 }
-
-
-
