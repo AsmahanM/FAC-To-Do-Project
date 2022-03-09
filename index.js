@@ -88,15 +88,22 @@ inputBtn.addEventListener('click', (e) => {
   // newFeatureFilm.value = inputTitle.value;
   // newFeatureFilm.setAttribute('readonly', 'readonly');
   
-  // Add movie text 
+  // Add movie title to the list
   const movieTitle = document.createElement('p');
   movieTitle.innerHTML = inputTitle.value;
   movieTitle.classList.add('movie-title')
-  movieTitle.addEventListener('click', markDone)
   bingeWorthy.appendChild(movieTitle);
   
   //console.log(newFeatureFilm);
   
+  //create done button 
+  const doneButton = document.createElement('button');
+  doneButton.innerHTML = `<i class="fas fa-check"></i>`;
+  doneButton.style.color = '#0ed600'
+  doneButton.style.borderColor = '#0ed600'
+  doneButton.addEventListener('click', markDone)
+  bingeWorthy.appendChild(doneButton);
+
   //create delete button
   const deleteButton = document.createElement('button');
   deleteButton.innerHTML = `<i class="fas fa-trash"></i>`;
@@ -104,6 +111,7 @@ inputBtn.addEventListener('click', (e) => {
   deleteButton.style.borderColor = '#ed0014'
   deleteButton.addEventListener('click', deleteItem)
   bingeWorthy.appendChild(deleteButton);
+
 
   inputDiv.appendChild(bingeWorthy)
 
@@ -122,9 +130,7 @@ inputTitle.value = ``;
 
 
 function deleteItem(e) {
-  console.log(e)
-e.path[2].remove()
- //e.target.parentElement.remove();
+e.path[2].remove() // removes div with button and movie name!
 }
 
 function markDone(e) {
