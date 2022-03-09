@@ -141,3 +141,14 @@ this.parentNode.remove() // removes div with button and movie name!
 function markDone(e) {
  e.path[1].childNodes[0].classList.toggle('strikethrough');
 }
+
+
+setTimeout(() => {
+test("deleteItem() function should remove an item from the list", () => {
+  const result = deleteItem("input[type = 'button']")
+  equal (result, true)
+  // console.log(deleteItem)
+})
+}, 5000);
+
+console.log(deleteItem)
