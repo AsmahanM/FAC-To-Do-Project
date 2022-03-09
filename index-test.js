@@ -1,20 +1,28 @@
-/*
+// MINIMUM requirement of Unit Tests (as stated on project brief)
 
-MINIMUM requirement of Unit Tests (as stated on project brief)
+//test("Submitting a new task adds it to the list", () => {
+// test goes here
+//});
 
-test("Submitting a new task adds it to the list", () => {
-  // test goes here
-});
+setTimeout(() => {
 
-test("Checking an entry marks it as complete", () => {
-  // test goes here
-});
+  test("Checking an entry marks it as complete", () => {
+  const checkbox = document.querySelector("input[type='checkbox']")
+  const title = document.querySelector('.movie-title');
+  checkbox.click();
+  const result = title.classList.contains('strikethrough'); 
+  const expected = true;
+  equal(result, expected)
+  checkbox.click(); //undoing the click
+  });
+  
+}, 5000);
 
-test("Deleting an entry removes it from the list", () => {
-  // test goes here
-});
+//test("Deleting an entry removes it from the list", () => {
+// test goes here
+//});
 
-*/
+
 
 
 
