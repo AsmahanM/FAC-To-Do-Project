@@ -87,6 +87,7 @@ inputBtn.addEventListener('click', (e) => {
   newFeatureFilm.classList.add('new-film');
   newFeatureFilm.value = inputTitle.value;
   newFeatureFilm.setAttribute('readonly', 'readonly');
+  newFeatureFilm.addEventListener('click', markDone)
   //console.log(newFeatureFilm);
 
   //create delete button
@@ -110,6 +111,11 @@ inputTitle.value = ``;
 }
 
 
-function deleteItem() {
-  console.log('clicked')
+function deleteItem(e) {
+console.log(e.path)
+ //e.target.parentElement.remove();
+}
+
+function markDone() {
+  console.log('done')
 }
