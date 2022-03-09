@@ -83,22 +83,32 @@ inputBtn.addEventListener('click', (e) => {
   //console.log(bingeWorthy);
 
   // create an input with class new-film
-  const newFeatureFilm = document.createElement('input');
-  newFeatureFilm.classList.add('new-film');
-  newFeatureFilm.value = inputTitle.value;
-  newFeatureFilm.setAttribute('readonly', 'readonly');
-  newFeatureFilm.addEventListener('click', markDone)
+  // const newFeatureFilm = document.createElement('input');
+  // newFeatureFilm.classList.add('new-film');
+  // newFeatureFilm.value = inputTitle.value;
+  // newFeatureFilm.setAttribute('readonly', 'readonly');
+  
+  // Add movie text 
+  const movieTitle = document.createElement('p');
+  movieTitle.innerHTML = inputTitle.value;
+  movieTitle.classList.add('movie-title')
+  movieTitle.addEventListener('click', markDone)
+  bingeWorthy.appendChild(movieTitle);
+  
   //console.log(newFeatureFilm);
-
+  
   //create delete button
   const deleteButton = document.createElement('button');
   deleteButton.innerHTML = `<i class="fas fa-trash"></i>`;
   deleteButton.style.color = '#ed0014'
   deleteButton.style.borderColor = '#ed0014'
   deleteButton.addEventListener('click', deleteItem)
+  bingeWorthy.appendChild(deleteButton);
+
+  inputDiv.appendChild(bingeWorthy)
 
 // append the bingeWorthy and newFeatureFilm to the inputDiv
-inputDiv.append(bingeWorthy, newFeatureFilm, deleteButton)
+// inputDiv.append(bingeWorthy, newFeatureFilm, deleteButton)
 
 // clearing the input title field
 //console.log(inputDiv.value = "");
@@ -112,10 +122,12 @@ inputTitle.value = ``;
 
 
 function deleteItem(e) {
-console.log(e.path)
+  console.log(e)
+e.path[2].remove()
  //e.target.parentElement.remove();
 }
 
-function markDone() {
-  console.log('done')
+function markDone(e) {
+  console.log('strike')
+  e.target.classList.toggle('strikethrough');
 }
