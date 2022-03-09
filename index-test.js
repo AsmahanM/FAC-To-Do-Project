@@ -52,14 +52,16 @@ test("form submits expected result", () => {
 //   })
 //   }, 5000);
   
-setTimeout(() => {
 
-  test("deleteItem() function should remove an item from the list", () => {
-  const movieDiv = document.querySelector('.movie-name')
-  const movieTitle = document.querySelector('.movie-title')
-  const deleteBtn = document.querySelector('.delete-button-class')
-  deleteBtn[0].click
-  result = deleteItem(movieDiv.contains(movieTitle[0]), false)
+setTimeout(() => {
+test("deleteItem() function should remove an item from the list", () => {
+  const movieDiv = document.querySelectorAll('.movie-name')
+  const movieTitle = document.querySelectorAll('.movie-title')
+  const deleteBtn = document.querySelectorAll('.delete-button-class')
+  deleteBtn[0].click();
+  const result = deleteItem(movieDiv.contains(movieTitle[0]));
+  const expected = false;
+  equal (result, expected);
   })
   }, 5000);
 
