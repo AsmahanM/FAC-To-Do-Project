@@ -93,6 +93,7 @@ inputBtn.addEventListener('click', (e) => {
   const deleteButton = document.createElement('button');
   deleteButton.innerHTML = `<i class="fas fa-trash"></i>`;
   deleteButton.classList.add('delete');
+  deleteButton.addEventListener('click', deleteItem)
 
 // append the bingeWorthy and newFeatureFilm to the inputDiv
 inputDiv.append(bingeWorthy, newFeatureFilm, deleteButton)
@@ -105,4 +106,9 @@ inputTitle.value = ``;
 
 })
 
+}
+
+
+function deleteItem() {
+  console.log('clicked')
 }
