@@ -89,12 +89,17 @@ inputBtn.addEventListener('click', (e) => {
   newFeatureFilm.setAttribute('readonly', 'readonly');
   //console.log(newFeatureFilm);
 
+  //create delete button
+  const deleteButton = document.createElement('button');
+  deleteButton.innerHTML = `<i class="fas fa-trash"></i>`;
+  deleteButton.classList.add('delete');
+
 // append the bingeWorthy and newFeatureFilm to the inputDiv
-inputDiv.append(bingeWorthy, newFeatureFilm)
+inputDiv.append(bingeWorthy, newFeatureFilm, deleteButton)
 
 // clearing the input title field
 //console.log(inputDiv.value = "");
-inputTitle.value = "";
+inputTitle.value = ``;
 
   }
 
