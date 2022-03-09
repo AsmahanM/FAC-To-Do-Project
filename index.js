@@ -135,7 +135,7 @@ inputTitle.value = ``;
 
 
 function deleteItem(e) {
-e.path[2].remove() // removes div with button and movie name!
+this.parentNode.remove() // removes div with button and movie name!
 }
 
 function markDone(e) {
