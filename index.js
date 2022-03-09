@@ -92,7 +92,8 @@ inputBtn.addEventListener('click', (e) => {
   //create delete button
   const deleteButton = document.createElement('button');
   deleteButton.innerHTML = `<i class="fas fa-trash"></i>`;
-  deleteButton.classList.add('delete');
+  deleteButton.style.color = '#ed0014'
+  deleteButton.style.borderColor = '#ed0014'
   deleteButton.addEventListener('click', deleteItem)
 
 // append the bingeWorthy and newFeatureFilm to the inputDiv
