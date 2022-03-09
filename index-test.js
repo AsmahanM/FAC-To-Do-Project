@@ -38,3 +38,29 @@ test("form submits expected result", () => {
 });
 
 */
+
+// setTimeout(() => {
+
+//   test("deleteItem() function should remove an item from the list", () => {
+//     const deleteBtn = deleteItem("input[type = 'button']");
+//     const movies = document.querySelector('.movie-name')
+//     const movietitle = document.querySelectorAll('.movie-title');
+//     const result = movies.includes(movietitle[0])
+//     const expected = false
+//     equal (result, expected);
+//     // console.log(deleteItem)
+//   })
+//   }, 5000);
+  
+setTimeout(() => {
+
+  test("deleteItem() function should remove an item from the list", () => {
+  const movieDiv = document.querySelector('.movie-name')
+  const movieTitle = document.querySelector('.movie-title')
+  const deleteBtn = document.querySelector('.delete-button-class')
+  deleteBtn[0].click
+  result = deleteItem(movieDiv.contains(movieTitle[0]), false)
+  })
+  }, 5000);
+
+//Remove the delete button's class name. (Added in for test purposes)
