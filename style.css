@@ -167,7 +167,7 @@ h1 {
 }
 
 .list-input input{
- width: 75%;
+ /* width: 74%; This is effecting the checkbx width */
  height: 15px;
  padding: 10px;
  color: var(--sharp-retroPink);
@@ -205,6 +205,7 @@ h1 {
   padding: 5px;
   letter-spacing: 0.1em;
   align-items: center;
+  margin-left: 3px;
   
 }
 
@@ -230,17 +231,6 @@ h1 {
   margin-bottom: 50%;
   padding-top: 0%;
 }
-
-/* Titles to be added to list: */
-.titles{
-  border-radius: 0px;
-  width: 91.3%;
-  position: relative;
-  background-color: var(--white-color);
-  padding: 30px 20px;
-  margin-top: 10px;
-}
-
 
 /* static animation for signal failure effect */
 /*
@@ -277,7 +267,7 @@ h1 {
 */
 
 .movie-name {
-  width: 95%;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -287,4 +277,42 @@ h1 {
 
 .movie-name input.new-film {
   width: 70%;
+}
+
+
+/* Titles to be added to list: */
+.titles{
+  border-radius: 0px;
+  width: 91.3%;
+  position: relative;
+  background-color: var(--white-color);
+  padding: 30px 20px;
+  margin-top: 10px;
+}
+
+
+
+/* Strike through movie title */
+
+.movie-title {
+  color: white;
+  width: 90%;
+  position: relative;
+ overflow: hidden;  /* hides the strikethrough on default */
+}
+
+.movie-title::after { /* creates a pseudo-element that is a child of the movie title */
+  position: absolute;
+  border-top: 2px solid white; /* the border is acting as the line through*/
+  top: calc(50% - 0.1em); /* move the border down to the middle of the text */
+  left: 0;
+  width: 100%; /* length of the border aka striketrough */
+  content: ''; /* only works with this added! */
+  display: block;
+  transform: translateX(-100%); /* this is offsetting it 100% to the side */
+  transition: transform .25s ease-in-out;
+}
+
+.movie-title.strikethrough::after {
+  transform: translateX(0); /* This brings the border back to the text */
 }

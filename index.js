@@ -83,21 +83,61 @@ inputBtn.addEventListener('click', (e) => {
   //console.log(bingeWorthy);
 
   // create an input with class new-film
-  const newFeatureFilm = document.createElement('input');
-  newFeatureFilm.classList.add('new-film');
-  newFeatureFilm.value = inputTitle.value;
-  newFeatureFilm.setAttribute('readonly', 'readonly');
+  // const newFeatureFilm = document.createElement('input');
+  // newFeatureFilm.classList.add('new-film');
+  // newFeatureFilm.value = inputTitle.value;
+  // newFeatureFilm.setAttribute('readonly', 'readonly');
+  
+  // Add movie title to the list
+  const movieTitle = document.createElement('p');
+  movieTitle.innerHTML = inputTitle.value;
+  movieTitle.classList.add('movie-title')
+  bingeWorthy.appendChild(movieTitle);
+  
   //console.log(newFeatureFilm);
+  
+  //create done button
+  //const doneButton = document.createElement('button');
+  //doneButton.innerHTML = `<i class="fas fa-check"></i>`;
+  //doneButton.style.color = '#0ed600'
+  //doneButton.style.borderColor = '#0ed600'
+  const doneButton = document.createElement('input');
+  doneButton.type = 'checkbox'
+  doneButton.classList.add('checkbox')
+  doneButton.ariaLabel = `Check movie title as watched`
+  doneButton.addEventListener('click', markDone)
+  bingeWorthy.appendChild(doneButton);
+
+  //create delete button
+  const deleteButton = document.createElement('button');
+  deleteButton.innerHTML = `<i class="fas fa-trash"></i>`;
+  deleteButton.style.color = '#ed0014'
+  deleteButton.style.borderColor = '#ed0014'
+  deleteButton.ariaLabel = `Remove movie title from list`
+  deleteButton.addEventListener('click', deleteItem)
+  bingeWorthy.appendChild(deleteButton);
+
+
+  inputDiv.appendChild(bingeWorthy)
 
 // append the bingeWorthy and newFeatureFilm to the inputDiv
-inputDiv.append(bingeWorthy, newFeatureFilm)
+// inputDiv.append(bingeWorthy, newFeatureFilm, deleteButton)
 
 // clearing the input title field
 //console.log(inputDiv.value = "");
-inputTitle.value = "";
+inputTitle.value = ``;
 
   }
 
 })
 
+}
+
+
+function deleteItem(e) {
+this.parentNode.remove() // removes div with button and movie name!
+}
+
+function markDone(e) {
+ e.path[1].childNodes[0].classList.toggle('strikethrough');
 }
