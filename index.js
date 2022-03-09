@@ -96,7 +96,7 @@ inputBtn.addEventListener('click', (e) => {
   
   //console.log(newFeatureFilm);
   
-  //create done button 
+  //create done button
   //const doneButton = document.createElement('button');
   //doneButton.innerHTML = `<i class="fas fa-check"></i>`;
   //doneButton.style.color = '#0ed600'
@@ -104,6 +104,7 @@ inputBtn.addEventListener('click', (e) => {
   const doneButton = document.createElement('input');
   doneButton.type = 'checkbox'
   doneButton.classList.add('checkbox')
+  doneButton.ariaLabel = `Check movie title as watched`
   doneButton.addEventListener('click', markDone)
   bingeWorthy.appendChild(doneButton);
 
@@ -112,6 +113,7 @@ inputBtn.addEventListener('click', (e) => {
   deleteButton.innerHTML = `<i class="fas fa-trash"></i>`;
   deleteButton.style.color = '#ed0014'
   deleteButton.style.borderColor = '#ed0014'
+  deleteButton.ariaLabel = `Remove movie title from list`
   deleteButton.addEventListener('click', deleteItem)
   bingeWorthy.appendChild(deleteButton);
 
