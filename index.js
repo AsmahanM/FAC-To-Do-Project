@@ -80,6 +80,7 @@ inputBtn.addEventListener('click', (e) => {
   // create a div with a class of movie-name
   const bingeWorthy = document.createElement('div');
   bingeWorthy.classList.add('movie-name');
+
   //console.log(bingeWorthy);
 
   // create an input with class new-film
@@ -89,8 +90,25 @@ inputBtn.addEventListener('click', (e) => {
   newFeatureFilm.setAttribute('readonly', 'readonly');
   //console.log(newFeatureFilm);
 
+  // set checkboxes to appear once movie has been added to the current list
+  /*
+  const checkbox = document.createElement("input");
+  checkbox.type = 'checkbox';
+  checkbox.id = 'checkbox';
+  //console.log(checkbox)
+  bingeWorthy.prepend(checkbox);
+
+   // assign delete button with class delete-btn
+   const deleteTrashCan = document.createElement('button');
+   deleteTrashCan.innerHTML = `<i class="fa-solid fa-trash-can"></i>`
+   deleteTrashCan.id = "delete-button"
+   deleteTrashCan.ariaLabel = "Delete";
+   //console.log(deleteTrashCan);
+   //bingeWorthy.prepend(deleteTrashCan);
+
+*/
 // append the bingeWorthy and newFeatureFilm to the inputDiv
-inputDiv.append(bingeWorthy, newFeatureFilm)
+inputDiv.append(bingeWorthy, newFeatureFilm, deleteTrashCan)
 
 // clearing the input title field
 //console.log(inputDiv.value = "");
