@@ -288,3 +288,21 @@ h1 {
 .movie-name input.new-film {
   width: 70%;
 }
+
+/*
+input#checkbox{
+  color: var(--sharp-retroPink);
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+#delete-button{
+  color: var(--venetian-red);
+  font-size: 0.1rem;
+}
+i.fa-trash-can{
+content: 'f2ed';
+}
+
+*/
