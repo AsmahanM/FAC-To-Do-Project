@@ -297,7 +297,7 @@ h1 {
   color: white;
   width: 70%;
   position: relative;
- /* overflow: hidden;  hides the strikethrough on default */
+ overflow: hidden;  /* hides the strikethrough on default */
 }
 
 .movie-title::after { /* creates a pseudo-element that is a child of the movie title */
@@ -314,4 +314,8 @@ h1 {
 
 .movie-title.strikethrough::after {
   transform: translateX(0); /* This brings the border back to the text */
+}
+
+.checkbox {
+  width: 20px;
 }

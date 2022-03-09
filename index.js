@@ -97,10 +97,13 @@ inputBtn.addEventListener('click', (e) => {
   //console.log(newFeatureFilm);
   
   //create done button 
-  const doneButton = document.createElement('button');
-  doneButton.innerHTML = `<i class="fas fa-check"></i>`;
-  doneButton.style.color = '#0ed600'
-  doneButton.style.borderColor = '#0ed600'
+  //const doneButton = document.createElement('button');
+  //doneButton.innerHTML = `<i class="fas fa-check"></i>`;
+  //doneButton.style.color = '#0ed600'
+  //doneButton.style.borderColor = '#0ed600'
+  const doneButton = document.createElement('input');
+  doneButton.type = 'checkbox'
+  doneButton.classList.add('checkbox')
   doneButton.addEventListener('click', markDone)
   bingeWorthy.appendChild(doneButton);
 
