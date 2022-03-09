@@ -85,7 +85,7 @@ h1 {
 /* Styling for TV button */
 
 .tv {
-  margin: 3.5em 2em auto 2em;
+  margin: 3.5em 1em auto 1em;
   position: fixed;
   z-index: 10;
   background-color: transparent;
@@ -139,24 +139,21 @@ h1 {
 /* To-Do List Skeleton: */
 .list-container {
   background: var(--onyx-black);
-  width: 40%;
+  max-width: 24em;
   top: 30%;
   left: 30%;
   right: 50%;
   min-height: 100px;
-  min-width: 300px;
   border-radius: 0px;
   z-index: 2;
-  position: relative;
-  margin: 0;  
-  margin-top: 50px;
+  margin: 50px auto auto auto;
   justify-content: space-evenly;
 }
 
 
 /**/
 .main {
-  margin: 6em;
+  margin-top: 6em;
 }
 
 /* List input button */
@@ -202,6 +199,7 @@ h1 {
   border-style: solid;
   border-color: var(--sharp-retroPink);
   border-width: 2px;
+  font-family:'Gochi Hand', 'Just Another Hand', cursive;
   padding: 5px;
   letter-spacing: 0.1em;
   align-items: center;
@@ -290,8 +288,6 @@ h1 {
   margin-top: 10px;
 }
 
-
-
 /* Strike through movie title */
 
 .movie-title {
@@ -315,4 +311,35 @@ h1 {
 
 .movie-title.strikethrough::after {
   transform: translateX(0); /* This brings the border back to the text */
+ }
+
+
+@media (max-width: 700px) {
+  .tv {
+   margin: 0;
+   z-index: 20;
+  }
+  .tv img {
+  width: 7em;
+  }
+  .tv p {
+   bottom: 7.2em;
+   left: 1.7em;
+   font-size: 10px;
+   line-height: 10px;
+  }
 }
+
+@media (max-width: 600px) {
+  .main {
+  margin-top: 7em;
+}
+}
+
+@media (max-width: 415px) {
+.main {
+  margin-right: 1em;
+  margin-left: 1em;
+}
+}
+
