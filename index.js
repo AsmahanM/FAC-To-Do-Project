@@ -134,6 +134,5 @@ e.path[2].remove() // removes div with button and movie name!
 }
 
 function markDone(e) {
-  console.log('strike')
-  e.target.classList.toggle('strikethrough');
+ e.path[1].childNodes[0].classList.toggle('strikethrough');
 }
