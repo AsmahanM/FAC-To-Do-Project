@@ -167,7 +167,7 @@ h1 {
 }
 
 .list-input input{
- width: 74%;
+ /* width: 74%; This is effecting the checkbx width */
  height: 15px;
  padding: 10px;
  color: var(--sharp-retroPink);
@@ -291,11 +291,12 @@ h1 {
 }
 
 
+
 /* Strike through movie title */
 
 .movie-title {
   color: white;
-  width: 70%;
+  width: 90%;
   position: relative;
  overflow: hidden;  /* hides the strikethrough on default */
 }
@@ -314,8 +315,4 @@ h1 {
 
 .movie-title.strikethrough::after {
   transform: translateX(0); /* This brings the border back to the text */
-}
-
-.checkbox {
-  width: 20px;
 }
