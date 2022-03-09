@@ -6,17 +6,48 @@
 
 setTimeout(() => {
 
-  test("Checking an entry marks it as complete", () => {
+  test("Checking first item marks it as complete", () => {
+  const checkbox = document.querySelectorAll("input[type='checkbox']")
+  const title = document.querySelectorAll('.movie-title');
+  checkbox[0].click();
+  const result = title[0].classList.contains('strikethrough'); 
+  const expected = true;
+  equal(result, expected)
+  checkbox[0].click(); //undoing the click
+  });
+
+  test("Checking third item marks it as complete", () => {
+  const checkbox = document.querySelectorAll("input[type='checkbox']")
+  const title = document.querySelectorAll('.movie-title');
+  checkbox[2].click();
+  const result = title[2].classList.contains('strikethrough'); 
+  const expected = true;
+  equal(result, expected)
+  checkbox[2].click(); //undoing the click
+  });
+
+  test("Checking the movie is not checked on default", () => {
+  const title = document.querySelectorAll('.movie-title');
+  const result2 = title[0].classList.contains('strikethrough'); 
+  const result1 = title[2].classList.contains('strikethrough'); 
+  const expected = false;
+  equal(result1, expected, 'first item tested')
+  equal(result2, expected, 'third item tested')
+  });
+
+  test("Checking unchecking removes the strike", () => {
   const checkbox = document.querySelector("input[type='checkbox']")
   const title = document.querySelector('.movie-title');
   checkbox.click();
+  checkbox.click();
   const result = title.classList.contains('strikethrough'); 
-  const expected = true;
+  const expected = false;
   equal(result, expected)
-  checkbox.click(); //undoing the click
+  checkbox.click();
   });
+
   
-}, 5000);
+}, 6000);
 
 //test("Deleting an entry removes it from the list", () => {
 // test goes here
