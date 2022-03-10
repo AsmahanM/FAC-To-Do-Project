@@ -231,7 +231,7 @@
   }
   
   /* static animation for signal failure effect */
-  /*
+  
   .tv-static {
     position: fixed;
     z-index: -1;
@@ -251,7 +251,7 @@
       -webkit-transform-origin: 50% 16%;
       transform-origin: 50% 100%;
     }
-    /*
+    
     100% {
       -webkit-transform: scale(1.25) translateY(-15px);
       transform: scale(1.25) translateY(-15px);
@@ -259,7 +259,7 @@
       transform-origin: top;
     }
   }
-  */
+  
   
   .movie-name {
     width: 100%;
