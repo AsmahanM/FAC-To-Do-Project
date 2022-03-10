@@ -1,10 +1,8 @@
 // MINIMUM requirement of Unit Tests (as stated on project brief)
 
-//test("Submitting a new task adds it to the list", () => {
-// test goes here
-//});
+setTimeout(() => { //Allows time for the elements to appear on the page as they're not present onload.
 
-setTimeout(() => {
+  // CHECKBOX TESTING
 
   test("Checking first item marks it as complete", () => {
   const checkbox = document.querySelectorAll("input[type='checkbox']")
@@ -46,16 +44,8 @@ setTimeout(() => {
   checkbox.click();
   });
 
-  
-}, 6000);
+  // ADDING ITEM TESTING 
 
-//test("Deleting an entry removes it from the list", () => {
-// test goes here
-//});
-
-
-
-setTimeout(() => {
 
 test("adding a new movie title to the list", () => {
   
@@ -90,9 +80,6 @@ test("adding a new movie title to the list", () => {
   inputTitle.value = ``;
 })
 
-}, 5000);
-
-setTimeout(() => {
 
 test("adding a second movie to the Binge list", () => {
   //starting the new list from clicking the animated television
@@ -125,37 +112,7 @@ test("adding a second movie to the Binge list", () => {
   inputTitle.value = ``;
 })
 
-}, 5000);
-
-
-
-
-
-
-
-
-/*
-
-EXAMPLE: Integration test (to reference later) :)
-
-test("form submits expected result", () => {
-  const inputa = document.querySelector("#a");
-  inputa.value = 10;
-  const inputb = document.querySelector("#b");
-  inputb.value = 2;
-  const inputsign = document.querySelector("#sign");
-  inputsign.value = "*";
-  const submitButton = document.querySelector("button[type='submit']");
-  submitButton.click();
-  const result = document.querySelector("#result");
-  equal(result.textContent, "20");
-  result.textContent = "";
-});
-
-
-*/
-
-setTimeout(() => {
+// DELETE ITEM TESTING
 
   test("deleteItem() function should remove an item from the list", () => {
     const deleteBtn = document.querySelectorAll('button');
@@ -168,10 +125,8 @@ setTimeout(() => {
     equal (result, expected);
     deleteBtn[0].click();
   })
-  }, 5000);
-  
 
-setTimeout(() => { //Allows time for the elements to appear on the page as they're not present onload.
+  
 test("deleteItem() function should remove an item from the list", () => {
   const movieDiv = document.querySelectorAll('.movie-name') //Outer container
   const movieTitle = document.querySelectorAll('.movie-title') //Input value
@@ -182,7 +137,7 @@ test("deleteItem() function should remove an item from the list", () => {
   // const expected = false;
   equal (result, expected); //When result takes place, expected is what we should see.
   })
-  }, 5000);
 
-//Remove the delete button's class name. (Added in for test purposes)
+
+  }, 8000);
 
