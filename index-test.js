@@ -44,8 +44,13 @@ setTimeout(() => { //Allows time for the elements to appear on the page as they'
   checkbox.click();
   });
 
+  
+  }, 8000);
+
+
   // ADDING ITEM TESTING 
 
+  setTimeout(() => { //Allows time for the elements to appear on the page as they're not present onload.
 
 test("adding a new movie title to the list", () => {
   
@@ -112,32 +117,34 @@ test("adding a second movie to the Binge list", () => {
   inputTitle.value = ``;
 })
 
+  }, 10100);
+
 // DELETE ITEM TESTING
 
-  test("deleteItem() function should remove an item from the list", () => {
-    const deleteBtn = document.querySelectorAll('.delete');
-    const movieDiv = document.querySelectorAll('.movie-name');
-    const movietitle = document.querySelectorAll('.movie-title');
+setTimeout(() => { //Allows time for the elements to appear on the page as they're not present onload.
+
+  test("deleteItem() function should remove the first item from the list", () => {
+    let deleteBtn = document.querySelectorAll('.delete');
+    let movieDiv = document.querySelectorAll('.movie-name');
+    let movietitle = document.querySelectorAll('.movie-title');
+    let parent = movieDiv[0].parentElement;
+    let add = document.querySelector('#add-title')
+
+    //create a replacent for after the test deletes the movie title
+    let replacementDiv =  movieDiv[0];
+    let replacementTitle = movietitle[0]
+    replacementTitle.classList.add('movie-title')
+
     deleteBtn[0].click();
-    console.log(deleteBtn[0].parentElement === movieDiv[0])
-    //const result = movieDiv[0].includes(movietitle[0])
-    const result = deleteBtn[0].parentElement;
-    const expected = 12;
+    const result = deleteBtn[0].parentElement.childNodes[3].innerText === movietitle[0] //check that the p in the same div as the button has the correspondig movie title
+    const expected = false;
     equal (result, expected);
-  })
 
-  
-test("deleteItem() function should remove an item from the list", () => {
-  const movieDiv = document.querySelectorAll('.movie-name') //Outer container
-  const movieTitle = document.querySelectorAll('.movie-title') //Input value
-  const deleteBtn = document.querySelectorAll('button') //delete button
-  if(this.item === undefined) {return} //This stops the .click() from returning an error message. 
-  let result = deleteBtn[0].click(); //When the first delete button is clicked...
-  const expected = deleteItem(movieDiv.contains(movieTitle[0]) == false); //...the first input will no longer be contained in the div.
-  // const expected = false;
-  equal (result, expected); //When result takes place, expected is what we should see.
+    replacementDiv.prepend(replacementTitle)
+    parent.insertBefore(replacementDiv, add.nextSibling)
+    
   })
 
 
-  }, 8000);
+  }, 13000);
 
