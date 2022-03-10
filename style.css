@@ -288,7 +288,7 @@
   /* Strike through movie title */
   
   .movie-title {
-    color: white;
+    color: var(--white-color);
     width: 90%;
     position: relative;
    overflow: hidden;  /* hides the strikethrough on default */
@@ -296,7 +296,7 @@
   
   .movie-title::after { /* creates a pseudo-element that is a child of the movie title */
     position: absolute;
-    border-top: 2px solid white; /* the border is acting as the line through*/
+    border-top: 2px solid var(--white-color); /* the border is acting as the line through*/
     top: calc(50% - 0.1em); /* move the border down to the middle of the text */
     left: 0;
     width: 100%; /* length of the border aka striketrough */
