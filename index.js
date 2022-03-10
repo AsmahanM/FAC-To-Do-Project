@@ -140,6 +140,7 @@ editBtn.ariaLabel = "Edit";
 bingeWorthy.appendChild(editBtn);
 console.log(editBtn);
   
+
 //console.log(editBtn)
 // event listener for edit button
 
@@ -194,6 +195,7 @@ this.parentNode.remove() // removes div with button and movie name!
 }
 
 function markDone(e) {
+
 e.path[1].childNodes[0].classList.toggle('strikethrough');
 }
 
