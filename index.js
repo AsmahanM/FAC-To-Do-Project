@@ -151,7 +151,7 @@ editBtn.addEventListener('click', () => {
       //allow the input editing to take place
       movieTitle.removeAttribute('readonly');
        //focus on input in edit mode if a user is not sure about the film
-       bingeWorthy.focus();
+      bingeWorthy.focus();
   } else {
        //keep the movie title stored
       isEditing = false;
@@ -189,6 +189,34 @@ inputTitle.value = ``;
 
 }
 
+// ************************ Code Creating Static once clicked and on a setTimeout *********************** //
+
+//selecting the image
+let mainElement = document.querySelector("img");
+// picking up the p tag
+let list = document.querySelector("p")
+// two event handlers which will handle the click on the shaking tele.
+mainElement.addEventListener("click", clickStatic)
+list.addEventListener("click", clickStatic)
+
+function clickStatic() {
+//   console.log(setTimeout(myTimeout))
+  mainElement.style.display="none";
+  list.style.display="none";
+  let errorLostScreen = document.querySelector(".tv")
+//   console.log(errorLostScreen)
+  errorLostScreen.classList.remove("no-signal");
+  errorLostScreen.classList.add("tv-static")
+  setTimeout(function() {
+    errorLostScreen.classList.remove("tv-static");
+    mainElement.style.display = "block";
+    list.style.display = "block";
+  }, 1500);
+//   console.log('yo,yo,yo')
+  return errorLostScreen
+};
+
+//console.log(clickStatic(errorLostScreen));
 
 function deleteItem(e) {
 this.parentNode.remove() // removes div with button and movie name!
