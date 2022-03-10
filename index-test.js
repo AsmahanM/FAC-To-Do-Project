@@ -118,11 +118,11 @@ test("adding a second movie to the Binge list", () => {
     const deleteBtn = document.querySelectorAll('.delete');
     const movieDiv = document.querySelectorAll('.movie-name');
     const movietitle = document.querySelectorAll('.movie-title');
-    //if(this.item === undefined) {return}
-    deleteBtn[0].click(); //When the first delete button is clicked...
+    deleteBtn[0].click();
+    console.log(deleteBtn[0].parentElement === movieDiv[0])
     //const result = movieDiv[0].includes(movietitle[0])
-    const result = false;
-    const expected = false
+    const result = deleteBtn[0].parentElement;
+    const expected = 12;
     equal (result, expected);
   })
 
