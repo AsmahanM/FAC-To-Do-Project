@@ -1,10 +1,8 @@
 // MINIMUM requirement of Unit Tests (as stated on project brief)
 
-//test("Submitting a new task adds it to the list", () => {
-// test goes here
-//});
+setTimeout(() => { //Allows time for the elements to appear on the page as they're not present onload.
 
-setTimeout(() => {
+  // CHECKBOX TESTING
 
   test("Checking first item marks it as complete", () => {
   const checkbox = document.querySelectorAll("input[type='checkbox']")
@@ -43,19 +41,15 @@ setTimeout(() => {
   const result = title.classList.contains('strikethrough'); 
   const expected = false;
   equal(result, expected)
-  checkbox.click();
   });
 
   
-}, 6000);
-
-//test("Deleting an entry removes it from the list", () => {
-// test goes here
-//});
+  }, 8000);
 
 
+  // ADDING ITEM TESTING 
 
-setTimeout(() => {
+  setTimeout(() => { //Allows time for the elements to appear on the page as they're not present onload.
 
 test("adding a new movie title to the list", () => {
   
@@ -90,9 +84,6 @@ test("adding a new movie title to the list", () => {
   inputTitle.value = ``;
 })
 
-}, 5000);
-
-setTimeout(() => {
 
 test("adding a second movie to the Binge list", () => {
   //starting the new list from clicking the animated television
@@ -125,64 +116,34 @@ test("adding a second movie to the Binge list", () => {
   inputTitle.value = ``;
 })
 
-}, 5000);
+  }, 10100);
 
-
-
-
-
-
-
-
-/*
-
-EXAMPLE: Integration test (to reference later) :)
-
-test("form submits expected result", () => {
-  const inputa = document.querySelector("#a");
-  inputa.value = 10;
-  const inputb = document.querySelector("#b");
-  inputb.value = 2;
-  const inputsign = document.querySelector("#sign");
-  inputsign.value = "*";
-  const submitButton = document.querySelector("button[type='submit']");
-  submitButton.click();
-  const result = document.querySelector("#result");
-  equal(result.textContent, "20");
-  result.textContent = "";
-});
-
-
-*/
-
-setTimeout(() => {
-
-  test("deleteItem() function should remove an item from the list", () => {
-    const deleteBtn = document.querySelectorAll('button');
-    const movieDiv = document.querySelectorAll('.movie-name');
-    const movietitle = document.querySelectorAll('.movie-title');
-    if(this.item === undefined) {return} //This stops the .click() from returning an error message. 
-    deleteBtn[0].click(); //When the first delete button is clicked...
-    const result = movieDiv.includes(movietitle[0])
-    const expected = false
-    equal (result, expected);
-    deleteBtn[0].click();
-  })
-  }, 5000);
-  
+// DELETE ITEM TESTING
 
 setTimeout(() => { //Allows time for the elements to appear on the page as they're not present onload.
-test("deleteItem() function should remove an item from the list", () => {
-  const movieDiv = document.querySelectorAll('.movie-name') //Outer container
-  const movieTitle = document.querySelectorAll('.movie-title') //Input value
-  const deleteBtn = document.querySelectorAll('button') //delete button
-  if(this.item === undefined) {return} //This stops the .click() from returning an error message. 
-  let result = deleteBtn[0].click(); //When the first delete button is clicked...
-  const expected = deleteItem(movieDiv.contains(movieTitle[0]) == false); //...the first input will no longer be contained in the div.
-  // const expected = false;
-  equal (result, expected); //When result takes place, expected is what we should see.
-  })
-  }, 5000);
 
-//Remove the delete button's class name. (Added in for test purposes)
+  test("deleteItem() function should remove the first item from the list", () => {
+    let deleteBtn = document.querySelectorAll('.delete');
+    let movieDiv = document.querySelectorAll('.movie-name');
+    let movietitle = document.querySelectorAll('.movie-title');
+    let parent = movieDiv[0].parentElement; //selecting to append back to page later
+    let add = document.querySelector('#add-title')
+
+    //create a replacent for after the test deletes the movie title
+    let replacementDiv =  movieDiv[0];
+    let replacementTitle = movietitle[0]
+    replacementTitle.classList.add('movie-title')
+
+    deleteBtn[0].click(); //click the delete button
+    const result = deleteBtn[0].parentElement.childNodes[3].innerText === movietitle[0] //check that the p in the same div as the button has the correspondig movie title
+    const expected = false;
+    equal (result, expected);
+
+    //appended the item back to the page
+    replacementDiv.prepend(replacementTitle) //prepend makes it first child - this fixed positioning issue
+    parent.insertBefore(replacementDiv, add.nextSibling) //simular to above comment!
+    
+  })
+
+  }, 13000);
 

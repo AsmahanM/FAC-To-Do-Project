@@ -110,6 +110,7 @@ bingeWorthy.appendChild(doneButton);
 
 //create delete button
 const deleteButton = document.createElement('button');
+deleteButton.classList.add('delete')
 deleteButton.innerHTML = `<i class="fas fa-trash"></i>`;
 deleteButton.style.color = '#ed0014'
 deleteButton.style.borderColor = '#ed0014'
@@ -138,7 +139,6 @@ const editBtn = document.createElement('button');
 editBtn.innerHTML = editEmoji;
 editBtn.ariaLabel = "Edit";
 bingeWorthy.appendChild(editBtn);
-console.log(editBtn);
   
 
 //console.log(editBtn)
@@ -164,7 +164,6 @@ editBtn.addEventListener('click', () => {
 
   }
 })
-console.log(movieTitle);
   //append the edit button to control
   controls.appendChild(bingeWorthy, editBtn)
 
