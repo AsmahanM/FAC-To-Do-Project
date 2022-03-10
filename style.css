@@ -16,6 +16,7 @@
   --neonBright-green: #0ed600;
   --veryDark-cyan: #006c6b;
   --darkTeal-color: #005857;
+  --skyBlue-color: #7cccfc;
   --ocean-blue: #002fc6;
   --darkOcean-blue: #002bb2;
   --midnight-blue: #001b75;
@@ -238,7 +239,7 @@
     margin: auto;
     width: 100vw;
     height: 100vh;
-    background-image: repeating-conic-gradient(#EC008E, #7cccfc 0.00085%);
+    background-image: repeating-conic-gradient(var(--sharp-retroPink), #7cccfc 0.00085%);
     background-size: cover;
     background-position: center;
     animation: error-static 0.5s steps(2, jump-both) infinite both;
