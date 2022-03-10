@@ -7,7 +7,8 @@
 #### Designed and Developed by [Asmahan](https://github.com/AsmahanM), [Maria](https://github.com/mariaalouisaa) and [Peter](https://github.com/PJSalter)
 
 
-*This is still a work in progress - please see issues for tasks still to be done*
+*This is still a work in progress - please see issues for tasks still to be done!*
+
 ---
 
 ## 📃 User Stories & acceptence criteria ✅
