@@ -239,7 +239,7 @@
     margin: auto;
     width: 100vw;
     height: 100vh;
-    background-image: repeating-conic-gradient(var(--sharp-retroPink), #7cccfc 0.00085%);
+    background-image: repeating-conic-gradient(var(--sharp-retroPink), var(--skyBlue-color) 0.00085%);
     background-size: cover;
     background-position: center;
     animation: error-static 0.5s steps(2, jump-both) infinite both;
