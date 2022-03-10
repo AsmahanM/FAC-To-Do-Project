@@ -6,15 +6,25 @@
 
 #### Designed and Developed by [Asmahan](https://github.com/AsmahanM), [Maria](https://github.com/mariaalouisaa) and [Peter](https://github.com/PJSalter)
 
+---
+
+## 📃 User Stories & acceptence criteria ✅
+
+- [ ] I want to be able to add tasks to a list so that I can keep track of them.
+- [ ] I want to be able to add tasks check things off my list so that I can see what I’ve done.
+- [ ] I want to be able to delete things from the list if I don’t need to do them anymore.
+- [ ] As a motor impaired user, I want to be able to use all the features of the app without a mouse.
+- [ ] A responsive, mobile-first design.
+- [ ] Tests for (at least) each user story.
+- [ ] Ensure your app is accessible to as many different users as possible.
+
+---
+
 ### :tickets: Product Design:
-**Mobile View:**
+**Mobile View, desktop view & list structure:**
 
-![Screen Shot 2022-03-04 at 21 44 04](https://user-images.githubusercontent.com/82019270/156847362-11a3dd98-8185-4a43-bf58-2b18e29ca056.png)
+<img src="https://user-images.githubusercontent.com/82019270/156847362-11a3dd98-8185-4a43-bf58-2b18e29ca056.png" height="300">    <img src="https://user-images.githubusercontent.com/82019270/156847638-60426cdf-e0f1-4c90-8e03-45f413a7d118.png" height="300">    <img src="https://user-images.githubusercontent.com/82019270/156847341-e50d0985-9000-429e-a48b-fb0e3a8a8869.png" height="300">
 
-**Desktop view:**
+---
 
-<img src="https://user-images.githubusercontent.com/82019270/156847638-60426cdf-e0f1-4c90-8e03-45f413a7d118.png" width="60%" height="50%">
-
-**List Structure:**
-
-![Screen Shot 2022-03-04 at 21 39 02](https://user-images.githubusercontent.com/82019270/156847341-e50d0985-9000-429e-a48b-fb0e3a8a8869.png)
+🌟 Site hosted on [Github Pages](asmahanm.github.io/fac-to-do-project/) 🌟
