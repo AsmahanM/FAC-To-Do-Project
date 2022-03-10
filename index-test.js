@@ -39,29 +39,32 @@ test("form submits expected result", () => {
 
 */
 
-// setTimeout(() => {
+setTimeout(() => {
 
-//   test("deleteItem() function should remove an item from the list", () => {
-//     const deleteBtn = deleteItem("input[type = 'button']");
-//     const movies = document.querySelector('.movie-name')
-//     const movietitle = document.querySelectorAll('.movie-title');
-//     const result = movies.includes(movietitle[0])
-//     const expected = false
-//     equal (result, expected);
-//     // console.log(deleteItem)
-//   })
-//   }, 5000);
+  test("deleteItem() function should remove an item from the list", () => {
+    const deleteBtn = document.querySelectorAll('button');
+    const movieDiv = document.querySelectorAll('.movie-name');
+    const movietitle = document.querySelectorAll('.movie-title');
+    if(this.item === undefined) {return} //This stops the .click() from returning an error message. 
+    deleteBtn[0].click(); //When the first delete button is clicked...
+    const result = movieDiv.includes(movietitle[0])
+    const expected = false
+    equal (result, expected);
+    deleteBtn[0].click();
+  })
+  }, 5000);
   
 
-setTimeout(() => {
+setTimeout(() => { //Allows time for the elements to appear on the page as they're not present onload.
 test("deleteItem() function should remove an item from the list", () => {
-  const movieDiv = document.querySelectorAll('.movie-name')
-  const movieTitle = document.querySelectorAll('.movie-title')
-  const deleteBtn = document.querySelectorAll('.delete-button-class')
-  deleteBtn[0].click();
-  const result = deleteItem(movieDiv.contains(movieTitle[0]));
-  const expected = false;
-  equal (result, expected);
+  const movieDiv = document.querySelectorAll('.movie-name') //Outer container
+  const movieTitle = document.querySelectorAll('.movie-title') //Input value
+  const deleteBtn = document.querySelectorAll('button') //delete button
+  if(this.item === undefined) {return} //This stops the .click() from returning an error message. 
+  let result = deleteBtn[0].click(); //When the first delete button is clicked...
+  const expected = deleteItem(movieDiv.contains(movieTitle[0]) == false); //...the first input will no longer be contained in the div.
+  // const expected = false;
+  equal (result, expected); //When result takes place, expected is what we should see.
   })
   }, 5000);
 

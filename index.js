@@ -116,8 +116,6 @@ inputBtn.addEventListener('click', (e) => {
   deleteButton.ariaLabel = `Remove movie title from list`
   deleteButton.addEventListener('click', deleteItem)
   bingeWorthy.appendChild(deleteButton);
-  deleteButton.classList.add('delete-button-class') //ADDITION
-
 
   inputDiv.appendChild(bingeWorthy)
 
@@ -136,7 +134,7 @@ inputTitle.value = ``;
 
 
 function deleteItem(e) {
-this.parentNode.remove() //removes div with button and movie name! 
+this.parentNode.remove() 
 }
 
 function markDone(e) {
@@ -144,16 +142,4 @@ function markDone(e) {
 }
 
 
-// // setTimeout(() => {
-
-// test("deleteItem() function should remove an item from the list", () => {
-//   // const deleteBtn = deleteItem("input[type = 'button']");
-//   const movies = document.querySelector('.movie-name')
-//   const movietitle = document.querySelectorAll('.movie-title');
-//   const result = movies.includes(movietitle[0])
-//   const expected = false
-//   equal (result, expected);
-//   // console.log(deleteItem)
-// })
-// // }, 5000);
 
