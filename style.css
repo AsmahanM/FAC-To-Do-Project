@@ -206,6 +206,11 @@
     margin-left: 3px;
     
   }
+
+  .delete {
+    color: var(--venetian-red);
+    border-color: var(--venetian-red);
+  }
   
   /* List Headings */
   .listCategoryContainer {
