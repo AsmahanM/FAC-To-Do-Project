@@ -41,7 +41,6 @@ setTimeout(() => { //Allows time for the elements to appear on the page as they'
   const result = title.classList.contains('strikethrough'); 
   const expected = false;
   equal(result, expected)
-  checkbox.click();
   });
 
   
@@ -127,7 +126,7 @@ setTimeout(() => { //Allows time for the elements to appear on the page as they'
     let deleteBtn = document.querySelectorAll('.delete');
     let movieDiv = document.querySelectorAll('.movie-name');
     let movietitle = document.querySelectorAll('.movie-title');
-    let parent = movieDiv[0].parentElement;
+    let parent = movieDiv[0].parentElement; //selecting to append back to page later
     let add = document.querySelector('#add-title')
 
     //create a replacent for after the test deletes the movie title
@@ -135,16 +134,16 @@ setTimeout(() => { //Allows time for the elements to appear on the page as they'
     let replacementTitle = movietitle[0]
     replacementTitle.classList.add('movie-title')
 
-    deleteBtn[0].click();
+    deleteBtn[0].click(); //click the delete button
     const result = deleteBtn[0].parentElement.childNodes[3].innerText === movietitle[0] //check that the p in the same div as the button has the correspondig movie title
     const expected = false;
     equal (result, expected);
 
-    replacementDiv.prepend(replacementTitle)
-    parent.insertBefore(replacementDiv, add.nextSibling)
+    //appended the item back to the page
+    replacementDiv.prepend(replacementTitle) //prepend makes it first child - this fixed positioning issue
+    parent.insertBefore(replacementDiv, add.nextSibling) //simular to above comment!
     
   })
-
 
   }, 13000);
 
