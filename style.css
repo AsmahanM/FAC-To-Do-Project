@@ -1,345 +1,347 @@
 :root {
---white-color: #FFFFFF;
---tinted-grey: #fafafa;
---steel-grey: #929292;
---fossil-grey: #888888;
---lightGrey-color: #6c6c6c;
---light-greyTwo: #626262;
---darkGrey-color: #3a3a3a;
---strongShade-grey: #303030;
---onyx-black: #000000;
---sunnyYellow-color: #ffe60a;
---mustard-yellow: #f5dc00;
---bright-greenMint: #0affd9;
---lightGreen-color: #00f5ce;
---lime-green: #10ea00;
---neonBright-green: #0ed600;
---veryDark-cyan: #006c6b;
---darkTeal-color: #005857;
---ocean-blue: #002fc6;
---darkOcean-blue: #002bb2;
---midnight-blue: #001b75;
---milkyWay-deepBlue: #001761;
---bright-pink: #ff0afe;
---sharp-retroPink: #f500f4;
---rich-red: #ed0014;
---venetian-red: #d90012;
-}
-
-html{
-  overflow: hidden;
-}
-
-body {
-  margin: 0;
-  font-family: 'Gochi Hand', 'Just Another Hand', cursive;
-  /* width: 100vw;  */
-  width: calc(var(--vw, 1vw) * 100);
-  height: 100vh; 
-  overflow: auto; 
-}
-
-/* background signal screen */
-
-.no-signal {
-  width: 100%; 
-  height: 100%; 
-  position: fixed; /* changed to fixed */
-  z-index: -1;
-  background: linear-gradient(to right, var(--ocean-blue) 0%, var(--darkOcean-blue) 14.28571%, var(--darkGrey-color) 14.28571%, var(--strongShade-grey) 28.57143%, var(--bright-pink) 28.57143%, var(--sharp-retroPink) 42.85714%, var(--lightGrey-color) 42.85714%, var(--light-greyTwo) 57.14286%, var(--bright-greenMint) 57.14286%, var(--lightGreen-color) 71.42857%, var(--darkGrey-color) 71.42857%, var(--strongShade-grey) 85.71429%, var(--white-color) 85.71429%, var(--tinted-grey) 100%);
-}
-
-.no-signal:before{
-    top: 0;
-    height: 68.47826%;
-    background: linear-gradient(to right, var(--white-color) 0%, var(--tinted-grey) 14.28571%, var(--sunnyYellow-color) 14.28571%, var(--mustard-yellow) 28.57143%, var(--bright-greenMint) 28.57143%, var(--lightGreen-color) 42.85714%, var(--lime-green) 42.85714%, var(--neonBright-green) 57.14286%, var(--bright-pink) 57.14286%, var(--sharp-retroPink) 71.42857%, var(--rich-red) 71.42857%, var(--venetian-red) 85.71429%, var(--ocean-blue) 85.71429%, var(--darkOcean-blue) 100%);
-}
-
-.no-signal:before, .no-signal:after {
-  content: '';
-  position: absolute;
-  left: 0;
-  z-index: 1;
-  width: 100%;
-}
-
-.no-signal:after {
-  bottom: 0;
-  height: 21.73913%;
-  background: linear-gradient(to right, var(--veryDark-cyan) 0%, var(--darkTeal-color) 16.66667%, var(--white-color) 16.66667%, var(--tinted-grey) 33.33333%, var(--midnight-blue) 33.33333%, var(--milkyWay-deepBlue) 50%, var(--lightGrey-color) 50%, var(--light-greyTwo) 66.66667%, var(--steel-grey) 66.66667%, var(--fossil-grey) 83.33333%, var(--darkGrey-color) 83.33333%, var(--strongShade-grey) 100%);
-  font-family: 'Gochi Hand', 'Just Another Hand', cursive;
-}
-
-
-h1 {
-  margin: 0;
-  position: fixed;
-  width: 100vw;
-  z-index: 20;
-  padding: 0.3em;
-  background-color: var(--onyx-black);
-  text-align: center;
-  color: var(--mustard-yellow);
-}
-
-/* Styling for TV button */
-
-.tv {
-  margin: 3.5em 1em auto 1em;
-  position: fixed;
-  z-index: 10;
-  background-color: transparent;
-  border: none;
-  height: 10em;
-}
-
-.tv img {
-  width: 10em;
-  z-index: 5;
-}
-
-.tv p {
-  /* position relaive used to move the <p> up so it appears in the TV */
-  position: relative;
-  bottom: 7.7em;
-  left: 1.7em;
-  width: 3em;
-  color: var(--mustard-yellow);
-  background-color: var(--onyx-black);
-  /* padding: 1em; */
-  /* had to change the padding to 0.9em because the background was visible
-  below the animated tele once shake happened. */
-  padding: 0.9em;
-  z-index: -1; /* I'm not sure if it's good practice to use negative z-index but this is the only way to get the text behind the tv */
-  letter-spacing: 2px;
-  font-family: 'Gochi Hand', 'Just Another Hand', cursive;
-}
-
-.tv img:hover{
-  /* animation will last for a duration of 1 second */
-  animation: tele-shake 1s;
-  /* every time the animation finishes it will immediately start again */
-  animation-iteration-count: infinite;
-}
-
-@keyframes tele-shake {
-  0% { transform: translate(1.6px, 1.6px) rotate(0deg); }
-  10% { transform: translate(-1.8px, -2.8px) rotate(-1deg); }
-  20% { transform: translate(-3.7px, 0.4px) rotate(1deg); }
-  30% { transform: translate(3.6px, 2.6px) rotate(0deg); }
-  40% { transform: translate(1.6px, -1.5px) rotate(1deg); }
-  50% { transform: translate(-1.9px, 2.5px) rotate(-1deg); }
-  60% { transform: translate(-3.5px, 1.5px) rotate(0deg); }
-  70% { transform: translate(3.5px, 2.2px) rotate(-1deg); }
-  80% { transform: translate(-2px, -2px) rotate(1deg); }
-  90% { transform: translate(1.8px, 2.5px) rotate(0deg); }
-  100% { transform: translate(1.7px, -2.6px) rotate(-1deg); }
-}
-
-/* To-Do List Skeleton: */
-.list-container {
-  background: var(--onyx-black);
-  max-width: 24em;
-  top: 30%;
-  left: 30%;
-  right: 50%;
-  min-height: 100px;
-  border-radius: 0px;
-  z-index: 2;
-  margin: 50px auto auto auto;
-  justify-content: space-evenly;
-}
-
-
-/**/
-.main {
-  margin-top: 6em;
-}
-
-/* List input button */
-.list-input {
-  position: relative;
-  padding: 20px;
-
-}
-
-.list-input input{
- /* width: 74%; This is effecting the checkbx width */
- height: 15px;
- padding: 10px;
- color: var(--sharp-retroPink);
- position: relative;
- border-radius: 0px;
- font-family:'Gochi Hand', 'Just Another Hand', cursive;
- font-size: 16px;
- border-style: solid;
- border-color: var(--sharp-retroPink);
- background-color: var(--onyx-black);
- border-width: 2px;
- letter-spacing: 0.1em;
-}
-
-.list-input input:focus{
-  outline:none;
-}
-
-.list-input button{
-  position: relative;
-  float: right;
-  font-weight: 500;
-  font-size: 16px;
-  background-color: var(--onyx-black);
-  border: none;
-  color: var(--sharp-retroPink);
-  cursor: pointer;
-  outline: none;
-  width: 15%;
-  height: 39px;
-  border-radius: 0px;
-  border-style: solid;
-  border-color: var(--sharp-retroPink);
-  border-width: 2px;
-  font-family:'Gochi Hand', 'Just Another Hand', cursive;
-  padding: 5px;
-  letter-spacing: 0.1em;
-  align-items: center;
-  margin-left: 3px;
+  --white-color: #FFFFFF;
+  --tinted-grey: #fafafa;
+  --steel-grey: #929292;
+  --fossil-grey: #888888;
+  --lightGrey-color: #6c6c6c;
+  --light-greyTwo: #626262;
+  --darkGrey-color: #3a3a3a;
+  --strongShade-grey: #303030;
+  --onyx-black: #000000;
+  --sunnyYellow-color: #ffe60a;
+  --mustard-yellow: #f5dc00;
+  --bright-greenMint: #0affd9;
+  --lightGreen-color: #00f5ce;
+  --lime-green: #10ea00;
+  --neonBright-green: #0ed600;
+  --veryDark-cyan: #006c6b;
+  --darkTeal-color: #005857;
+  --skyBlue-color: #7cccfc;
+  --ocean-blue: #002fc6;
+  --darkOcean-blue: #002bb2;
+  --midnight-blue: #001b75;
+  --milkyWay-deepBlue: #001761;
+  --bright-pink: #ff0afe;
+  --sharp-retroPink: #f500f4;
+  --rich-red: #ed0014;
+  --venetian-red: #d90012;
+  }
   
-}
-
-/* List Headings */
-.listCategoryContainer {
-  background: var(--onyx-black);
-  width: auto;
-  z-index: 2;
-  padding: 20px;
-  position: relative;
-  position: relative;
-  margin: 0;  
-  margin-bottom: 50px; 
-  height: 40px;
-}
-
-.listCategoryTitle {
-  color: var(--white-color);
-  font-size: 24px;
-  word-wrap: break-word;
-  text-align: center;
-  letter-spacing: 0.1em;
-  margin-bottom: 50%;
-  padding-top: 0%;
-}
-
-/* static animation for signal failure effect */
-/*
-.tv-static {
-  position: fixed;
-  z-index: -1;
-  margin: auto;
-  width: 100vw;
-  height: 100vh;
-  background-image: repeating-conic-gradient(#EC008E, #7cccfc 0.00085%);
-  background-size: cover;
-  background-position: center;
-  animation: error-static 0.5s steps(2, jump-both) infinite both;
-  transform: translate3d(0, 0, 0);
-}
-
-@keyframes error-static {
-  0% {
-    -webkit-transform: scale(1) translateY(0);
-    transform: scale(1) translateY(0);
-    -webkit-transform-origin: 50% 16%;
-    transform-origin: 50% 100%;
+  html{
+    overflow: hidden;
   }
-  /*
-
-  100% {
-    -webkit-transform: scale(1.25) translateY(-15px);
-    transform: scale(1.25) translateY(-15px);
-    -webkit-transform-origin: top;
-    transform-origin: top;
+  
+  body {
+    margin: 0;
+    font-family: 'Gochi Hand', 'Just Another Hand', cursive;
+    /* width: 100vw;  */
+    width: calc(var(--vw, 1vw) * 100);
+    height: 100vh; 
+    overflow: auto; 
   }
-}
-
-*/
-
-.movie-name {
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  margin-bottom: 5px;
-  background-color: var(--onyx-black);
-}
-
-.movie-name input.new-film {
-  width: 70%;
-}
-
-
-/* Titles to be added to list: */
-.titles{
-  border-radius: 0px;
-  width: 91.3%;
-  position: relative;
-  background-color: var(--white-color);
-  padding: 30px 20px;
-  margin-top: 10px;
-}
-
-/* Strike through movie title */
-
-.movie-title {
-  color: white;
-  width: 90%;
-  position: relative;
- overflow: hidden;  /* hides the strikethrough on default */
-}
-
-.movie-title::after { /* creates a pseudo-element that is a child of the movie title */
-  position: absolute;
-  border-top: 2px solid white; /* the border is acting as the line through*/
-  top: calc(50% - 0.1em); /* move the border down to the middle of the text */
-  left: 0;
-  width: 100%; /* length of the border aka striketrough */
-  content: ''; /* only works with this added! */
-  display: block;
-  transform: translateX(-100%); /* this is offsetting it 100% to the side */
-  transition: transform .25s ease-in-out;
-}
-
-.movie-title.strikethrough::after {
-  transform: translateX(0); /* This brings the border back to the text */
- }
-
-
-@media (max-width: 700px) {
+  
+  /* background signal screen */
+  
+  .no-signal {
+    width: 100%; 
+    height: 100%; 
+    position: fixed; /* changed to fixed */
+    z-index: -1;
+    background: linear-gradient(to right, var(--ocean-blue) 0%, var(--darkOcean-blue) 14.28571%, var(--darkGrey-color) 14.28571%, var(--strongShade-grey) 28.57143%, var(--bright-pink) 28.57143%, var(--sharp-retroPink) 42.85714%, var(--lightGrey-color) 42.85714%, var(--light-greyTwo) 57.14286%, var(--bright-greenMint) 57.14286%, var(--lightGreen-color) 71.42857%, var(--darkGrey-color) 71.42857%, var(--strongShade-grey) 85.71429%, var(--white-color) 85.71429%, var(--tinted-grey) 100%);
+  }
+  
+  .no-signal:before{
+      top: 0;
+      height: 68.47826%;
+      background: linear-gradient(to right, var(--white-color) 0%, var(--tinted-grey) 14.28571%, var(--sunnyYellow-color) 14.28571%, var(--mustard-yellow) 28.57143%, var(--bright-greenMint) 28.57143%, var(--lightGreen-color) 42.85714%, var(--lime-green) 42.85714%, var(--neonBright-green) 57.14286%, var(--bright-pink) 57.14286%, var(--sharp-retroPink) 71.42857%, var(--rich-red) 71.42857%, var(--venetian-red) 85.71429%, var(--ocean-blue) 85.71429%, var(--darkOcean-blue) 100%);
+  }
+  
+  .no-signal:before, .no-signal:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+  }
+  
+  .no-signal:after {
+    bottom: 0;
+    height: 21.73913%;
+    background: linear-gradient(to right, var(--veryDark-cyan) 0%, var(--darkTeal-color) 16.66667%, var(--white-color) 16.66667%, var(--tinted-grey) 33.33333%, var(--midnight-blue) 33.33333%, var(--milkyWay-deepBlue) 50%, var(--lightGrey-color) 50%, var(--light-greyTwo) 66.66667%, var(--steel-grey) 66.66667%, var(--fossil-grey) 83.33333%, var(--darkGrey-color) 83.33333%, var(--strongShade-grey) 100%);
+    font-family: 'Gochi Hand', 'Just Another Hand', cursive;
+  }
+  
+  
+  h1 {
+    margin: 0;
+    position: fixed;
+    width: 100vw;
+    z-index: 20;
+    padding: 0.3em;
+    background-color: var(--onyx-black);
+    text-align: center;
+    color: var(--mustard-yellow);
+  }
+  
+  /* Styling for TV button */
+  
   .tv {
-   margin: 0;
-   z-index: 20;
+    margin: 3.5em 1em auto 1em;
+    position: fixed;
+    z-index: 10;
+    background-color: transparent;
+    border: none;
+    height: 10em;
   }
+  
   .tv img {
-  width: 7em;
+    width: 10em;
+    z-index: 5;
   }
+  
   .tv p {
-   bottom: 7.2em;
-   left: 1.7em;
-   font-size: 10px;
-   line-height: 10px;
+    /* position relaive used to move the <p> up so it appears in the TV */
+    position: relative;
+    bottom: 7.7em;
+    left: 1.7em;
+    width: 3em;
+    color: var(--mustard-yellow);
+    background-color: var(--onyx-black);
+    /* padding: 1em; */
+    /* had to change the padding to 0.9em because the background was visible
+    below the animated tele once shake happened. */
+    padding: 0.9em;
+    z-index: -1; /* I'm not sure if it's good practice to use negative z-index but this is the only way to get the text behind the tv */
+    letter-spacing: 2px;
+    font-family: 'Gochi Hand', 'Just Another Hand', cursive;
   }
-}
-
-@media (max-width: 600px) {
+  
+  .tv img:hover{
+    /* animation will last for a duration of 1 second */
+    animation: tele-shake 1s;
+    /* every time the animation finishes it will immediately start again */
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes tele-shake {
+    0% { transform: translate(1.6px, 1.6px) rotate(0deg); }
+    10% { transform: translate(-1.8px, -2.8px) rotate(-1deg); }
+    20% { transform: translate(-3.7px, 0.4px) rotate(1deg); }
+    30% { transform: translate(3.6px, 2.6px) rotate(0deg); }
+    40% { transform: translate(1.6px, -1.5px) rotate(1deg); }
+    50% { transform: translate(-1.9px, 2.5px) rotate(-1deg); }
+    60% { transform: translate(-3.5px, 1.5px) rotate(0deg); }
+    70% { transform: translate(3.5px, 2.2px) rotate(-1deg); }
+    80% { transform: translate(-2px, -2px) rotate(1deg); }
+    90% { transform: translate(1.8px, 2.5px) rotate(0deg); }
+    100% { transform: translate(1.7px, -2.6px) rotate(-1deg); }
+  }
+  
+  /* To-Do List Skeleton: */
+  .list-container {
+    background: var(--onyx-black);
+    max-width: 24em;
+    top: 30%;
+    left: 30%;
+    right: 50%;
+    min-height: 100px;
+    border-radius: 0px;
+    z-index: 2;
+    margin: 50px auto auto auto;
+    justify-content: space-evenly;
+  }
+  
+  
+  /**/
   .main {
-  margin-top: 7em;
-}
-}
+    margin-top: 6em;
+  }
+  
+  /* List input button */
+  .list-input {
+    position: relative;
+    padding: 20px;
+  
+  }
+  
+  .list-input input{
+   /* width: 74%; This is effecting the checkbx width */
+   height: 15px;
+   padding: 10px;
+   color: var(--sharp-retroPink);
+   position: relative;
+   border-radius: 0px;
+   font-family:'Gochi Hand', 'Just Another Hand', cursive;
+   font-size: 16px;
+   border-style: solid;
+   border-color: var(--sharp-retroPink);
+   background-color: var(--onyx-black);
+   border-width: 2px;
+   letter-spacing: 0.1em;
+  }
+  
+  .list-input input:focus{
+    outline:none;
+  }
+  
+  .list-input button{
+    position: relative;
+    float: right;
+    font-weight: 500;
+    font-size: 16px;
+    background-color: var(--onyx-black);
+    border: none;
+    color: var(--sharp-retroPink);
+    cursor: pointer;
+    outline: none;
+    width: 15%;
+    height: 39px;
+    border-radius: 0px;
+    border-style: solid;
+    border-color: var(--sharp-retroPink);
+    border-width: 2px;
+    font-family:'Gochi Hand', 'Just Another Hand', cursive;
+    padding: 5px;
+    letter-spacing: 0.1em;
+    align-items: center;
+    margin-left: 3px;
+    
+  }
 
-@media (max-width: 415px) {
-.main {
-  margin-right: 1em;
-  margin-left: 1em;
-}
-}
-
+  .delete {
+    color: var(--venetian-red);
+    border-color: var(--venetian-red);
+  }
+  
+  /* List Headings */
+  .listCategoryContainer {
+    background: var(--onyx-black);
+    width: auto;
+    z-index: 2;
+    padding: 20px;
+    position: relative;
+    position: relative;
+    margin: 0;  
+    margin-bottom: 50px; 
+    height: 40px;
+  }
+  
+  .listCategoryTitle {
+    color: var(--white-color);
+    font-size: 24px;
+    word-wrap: break-word;
+    text-align: center;
+    letter-spacing: 0.1em;
+    margin-bottom: 50%;
+    padding-top: 0%;
+  }
+  
+  /* static animation for signal failure effect */
+  
+  .tv-static {
+    position: fixed;
+    z-index: -1;
+    margin: auto;
+    width: 100vw;
+    height: 100vh;
+    background-image: repeating-conic-gradient(var(--sharp-retroPink), var(--skyBlue-color) 0.00085%);
+    background-size: cover;
+    background-position: center;
+    animation: error-static 0.5s steps(2, jump-both) infinite both;
+    transform: translate3d(0, 0, 0);
+  }
+  @keyframes error-static {
+    0% {
+      -webkit-transform: scale(1) translateY(0);
+      transform: scale(1) translateY(0);
+      -webkit-transform-origin: 50% 16%;
+      transform-origin: 50% 100%;
+    }
+    
+    100% {
+      -webkit-transform: scale(1.25) translateY(-15px);
+      transform: scale(1.25) translateY(-15px);
+      -webkit-transform-origin: top;
+      transform-origin: top;
+    }
+  }
+  
+  
+  .movie-name {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    background-color: var(--onyx-black);
+  }
+  
+  .movie-name input.new-film {
+    width: 70%;
+  }
+  
+  
+  /* Titles to be added to list: */
+  .titles{
+    border-radius: 0px;
+    width: 91.3%;
+    position: relative;
+    background-color: var(--white-color);
+    padding: 30px 20px;
+    margin-top: 10px;
+  }
+  
+  /* Strike through movie title */
+  
+  .movie-title {
+    color: var(--white-color);
+    width: 90%;
+    position: relative;
+   overflow: hidden;  /* hides the strikethrough on default */
+  }
+  
+  .movie-title::after { /* creates a pseudo-element that is a child of the movie title */
+    position: absolute;
+    border-top: 2px solid var(--white-color); /* the border is acting as the line through*/
+    top: calc(50% - 0.1em); /* move the border down to the middle of the text */
+    left: 0;
+    width: 100%; /* length of the border aka striketrough */
+    content: ''; /* only works with this added! */
+    display: block;
+    transform: translateX(-100%); /* this is offsetting it 100% to the side */
+    transition: transform .25s ease-in-out;
+  }
+  
+  .movie-title.strikethrough::after {
+    transform: translateX(0); /* This brings the border back to the text */
+   }
+  
+  
+  @media (max-width: 700px) {
+    .tv {
+     margin: 0;
+     z-index: 20;
+    }
+    .tv img {
+    width: 7em;
+    }
+    .tv p {
+     bottom: 7.2em;
+     left: 1.7em;
+     font-size: 10px;
+     line-height: 10px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .main {
+    margin-top: 7em;
+  }
+  }
+  
+  @media (max-width: 415px) {
+  .main {
+    margin-right: 1em;
+    margin-left: 1em;
+  }
+  }
