@@ -120,30 +120,16 @@ test("adding a second movie to the Binge list", () => {
 
 // DELETE ITEM TESTING
 
-setTimeout(() => { //Allows time for the elements to appear on the page as they're not present onload.
+test("Delete button removes items from the list", () => {
+document.querySelector('button#new-list').click(); //Click the TV button to generate new list
+const input = document.querySelector('input');
+input.value = "test"; //Add input value.
+document.querySelector('button#add-title').click(); //Click the 'plus' button to submit input.
+const todo = document.querySelector('.movie-name');
+todo.querySelector('button.delete').click(); //Click the delete button in the movie-name div to delete the input.
+const todoAfter = document.querySelector('.movie-name');
+equal(todoAfter, null, 'Item has been deleted.') //After the input has been deleted, the querySelecting movie-name should show up as null bc the item is deleted.
+todo.remove() //Clear the screen.
+document.querySelector('.list-container').remove();
 
-  test("deleteItem() function should remove the first item from the list", () => {
-    let deleteBtn = document.querySelectorAll('.delete');
-    let movieDiv = document.querySelectorAll('.movie-name');
-    let movietitle = document.querySelectorAll('.movie-title');
-    let parent = movieDiv[0].parentElement; //selecting to append back to page later
-    let add = document.querySelector('#add-title')
-
-    //create a replacent for after the test deletes the movie title
-    let replacementDiv =  movieDiv[0];
-    let replacementTitle = movietitle[0]
-    replacementTitle.classList.add('movie-title')
-
-    deleteBtn[0].click(); //click the delete button
-    const result = deleteBtn[0].parentElement.childNodes[3].innerText === movietitle[0] //check that the p in the same div as the button has the correspondig movie title
-    const expected = false;
-    equal (result, expected);
-
-    //appended the item back to the page
-    replacementDiv.prepend(replacementTitle) //prepend makes it first child - this fixed positioning issue
-    parent.insertBefore(replacementDiv, add.nextSibling) //simular to above comment!
-    
-  })
-
-  }, 13000);
-
+})

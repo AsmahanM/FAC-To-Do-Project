@@ -110,7 +110,7 @@ bingeWorthy.appendChild(doneButton);
 
 //create delete button
 const deleteButton = document.createElement('button');
-deleteButton.classList.add('delete')
+deleteButton.className = 'delete'
 deleteButton.innerHTML = `<i class="fas fa-trash"></i>`;
 deleteButton.style.color = '#ed0014'
 deleteButton.style.borderColor = '#ed0014'
@@ -139,7 +139,6 @@ const editBtn = document.createElement('button');
 editBtn.innerHTML = editEmoji;
 editBtn.ariaLabel = "Edit";
 bingeWorthy.appendChild(editBtn);
-  
 
 //console.log(editBtn)
 // event listener for edit button
@@ -170,7 +169,6 @@ editBtn.addEventListener('click', () => {
 
 
 bingeWorthy.appendChild(editBtn, movieTitle)
-
 
 // append the bingeWorthy and newFeatureFilm to the inputDiv
   //inputDiv.append(bingeWorthy, deleteButton, controls, editBtn)
