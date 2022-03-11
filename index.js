@@ -116,6 +116,7 @@ inputBtn.addEventListener('click', (e) => {
   deleteButton.ariaLabel = `Remove movie title from list`
   deleteButton.addEventListener('click', deleteItem)
   bingeWorthy.appendChild(deleteButton);
+  deleteButton.className = 'delete'
 
   inputDiv.appendChild(bingeWorthy)
 
