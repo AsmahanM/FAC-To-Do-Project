@@ -8,7 +8,7 @@ document.querySelector('#new-list').click();
 const input = document.querySelector('input');
 input.value = "test";
 document.querySelector('#add-title').click();
-// 2) Checking the checkbox
+// 2) Checking the first checkbox
 const checkbox = document.querySelectorAll("input[type='checkbox']")
 checkbox[0].click();
 // 3) Check if checked item contains class 
@@ -20,38 +20,52 @@ equal(result, expected);
 // 5) Remove elements added by this test
 document.querySelector('.list-container').remove();
 });
-/*
-  test("Checking third item marks it as complete", () => {
-  const checkbox = document.querySelectorAll("input[type='checkbox']")
-  const title = document.querySelectorAll('.movie-title');
-  checkbox[2].click();
-  const result = title[2].classList.contains('strikethrough'); 
-  const expected = true;
-  equal(result, expected)
-  checkbox[2].click(); //undoing the click
-  });
 
-  test("Checking the movie is not checked on default", () => {
-  const title = document.querySelectorAll('.movie-title');
-  const result2 = title[0].classList.contains('strikethrough'); 
-  const result1 = title[2].classList.contains('strikethrough'); 
-  const expected = false;
-  equal(result1, expected, 'first item tested')
-  equal(result2, expected, 'third item tested')
-  });
+test("Checking third item marks it as complete", () => {
+ // 1) Getting the List on the screen  
+document.querySelector('#new-list').click();
+const input = document.querySelector('input');
+input.value = "test one";
+document.querySelector('#add-title').click(); 
+// 2) Adding two more titles to the list
+input.value = "test two";
+document.querySelector('#add-title').click();
+input.value = "test three";
+document.querySelector('#add-title').click();
+// 3) Checking the third checkbox
+const checkbox = document.querySelectorAll("input[type='checkbox']")
+checkbox[2].click();
+// 4) Check if checked item contains class 
+const title = document.querySelectorAll('.movie-title');
+// 5) Check result with equal func
+const result = title[2].classList.contains('strikethrough'); 
+const expected = true;
+equal(result, expected)
+// 6) Remove elements added by this test
+document.querySelector('.list-container').remove();
+});
 
-  test("Checking unchecking removes the strike", () => {
-  const checkbox = document.querySelector("input[type='checkbox']")
-  const title = document.querySelector('.movie-title');
-  checkbox.click();
-  checkbox.click();
-  const result = title.classList.contains('strikethrough'); 
-  const expected = false;
-  equal(result, expected)
-  
-  });
+test("Checking unchecking removes the strike", () => {
+// 1) Getting the List on the screen  
+document.querySelector('#new-list').click();
+const input = document.querySelector('input');
+input.value = "test";
+document.querySelector('#add-title').click();
+// 2) Checking the first checkbox
+const checkbox = document.querySelectorAll("input[type='checkbox']")
+checkbox[0].click();
+// 3) Unchecking the first checkbox
+checkbox[0].click();
+// 4) Check if checked item contains class 
+const title = document.querySelectorAll('.movie-title');
+const result = title[0].classList.contains('strikethrough'); 
+//5) Check result with equal func
+const expected = false;
+equal(result, expected);
+// 6) Remove elements added by this test
+document.querySelector('.list-container').remove();
+});
 
-  */
 
 
   // ADDING ITEM TESTING 
