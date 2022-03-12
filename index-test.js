@@ -2,16 +2,25 @@
 
  // CHECKBOX TESTING
 
-  test("Checking first item marks it as complete", () => {
-  const checkbox = document.querySelectorAll("input[type='checkbox']")
-  const title = document.querySelectorAll('.movie-title');
-  checkbox[0].click();
-  const result = title[0].classList.contains('strikethrough'); 
-  const expected = true;
-  equal(result, expected)
-  checkbox[0].click(); //undoing the click
-  });
-
+test("Checking first item marks it as complete", () => {
+// 1) Getting the List on the screen  
+document.querySelector('#new-list').click();
+const input = document.querySelector('input');
+input.value = "test";
+document.querySelector('#add-title').click();
+// 2) Checking the checkbox
+const checkbox = document.querySelectorAll("input[type='checkbox']")
+checkbox[0].click();
+// 3) Check if checked item contains class 
+const title = document.querySelectorAll('.movie-title');
+const result = title[0].classList.contains('strikethrough'); 
+// 4) Check result with equal func
+const expected = true;
+equal(result, expected);
+// 5) Remove elements added by this test
+document.querySelector('.list-container').remove();
+});
+/*
   test("Checking third item marks it as complete", () => {
   const checkbox = document.querySelectorAll("input[type='checkbox']")
   const title = document.querySelectorAll('.movie-title');
@@ -39,9 +48,10 @@
   const result = title.classList.contains('strikethrough'); 
   const expected = false;
   equal(result, expected)
+  
   });
 
-  
+  */
 
 
   // ADDING ITEM TESTING 
