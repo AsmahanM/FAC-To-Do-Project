@@ -1,8 +1,6 @@
 // MINIMUM requirement of Unit Tests (as stated on project brief)
 
-setTimeout(() => { //Allows time for the elements to appear on the page as they're not present onload.
-
-  // CHECKBOX TESTING
+ // CHECKBOX TESTING
 
   test("Checking first item marks it as complete", () => {
   const checkbox = document.querySelectorAll("input[type='checkbox']")
@@ -44,7 +42,6 @@ setTimeout(() => { //Allows time for the elements to appear on the page as they'
   });
 
   
-  }, 8000);
 
 
   // ADDING ITEM TESTING 
